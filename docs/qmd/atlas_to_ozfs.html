@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>National Zoning Atlas to OZFS Code – Zoning Accessibility Analysis Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Zoning Accessibility Analysis Project</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../qmd/index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-ozfs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">OZFS</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-ozfs">    
+        <li>
+    <a class="dropdown-item" href="../qmd/ozfs.html">
+ <span class="dropdown-text">OZFS - Documentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../qmd/naming.html">
+ <span class="dropdown-text">OZFS - Naming Convention</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../qmd/slides.html">
+ <span class="dropdown-text">Slideshow Visualization</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../qmd/atlas_to_ozfs_howto.html">
+ <span class="dropdown-text">Converting NZA Data</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../qmd/atlas_to_ozfs_howto.html">
+ <span class="dropdown-text">NZA Manual Adjustment</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tidyzoning" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">tidyzoning</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-tidyzoning">    
+        <li>
+    <a class="dropdown-item" href="../qmd/tidyzoning.html">
+ <span class="dropdown-text">tidyzoning</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../qmd/tidybuilding.html">
+ <span class="dropdown-text">tidybuilding</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/find_district.html">
+ <span class="dropdown-text">find_district_idx()</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/find_bldg_type.html">
+ <span class="dropdown-text">find_bldg_type()</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/check_land_use.html">
+ <span class="dropdown-text">check_land_use()</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/check_fl_area.html">
+ <span class="dropdown-text">check_fl_area()</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/check_footprint.html">
+ <span class="dropdown-text">check_footprint()</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a></li>
+  <li><a href="#inputs" id="toc-inputs" class="nav-link" data-scroll-target="#inputs">Inputs</a></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  </ul></li>
+  <li><a href="#functions-1" id="toc-functions-1" class="nav-link" data-scroll-target="#functions-1">Functions</a>
+  <ul>
+  <li><a href="#atlas_to_ozfs" id="toc-atlas_to_ozfs" class="nav-link" data-scroll-target="#atlas_to_ozfs">atlas_to_ozfs</a></li>
+  <li><a href="#organize_features" id="toc-organize_features" class="nav-link" data-scroll-target="#organize_features">organize_features</a></li>
+  <li><a href="#separate_uses" id="toc-separate_uses" class="nav-link" data-scroll-target="#separate_uses">separate_uses</a></li>
+  <li><a href="#add_uses_permitted_column" id="toc-add_uses_permitted_column" class="nav-link" data-scroll-target="#add_uses_permitted_column">add_uses_permitted_column</a></li>
+  <li><a href="#update_uses_permitted" id="toc-update_uses_permitted" class="nav-link" data-scroll-target="#update_uses_permitted">update_uses_permitted</a></li>
+  <li><a href="#make_constraints_section" id="toc-make_constraints_section" class="nav-link" data-scroll-target="#make_constraints_section">make_constraints_section</a></li>
+  <li><a href="#organize_rules" id="toc-organize_rules" class="nav-link" data-scroll-target="#organize_rules">organize_rules</a></li>
+  <li><a href="#write_list_as_json" id="toc-write_list_as_json" class="nav-link" data-scroll-target="#write_list_as_json">write_list_as_json</a></li>
+  <li><a href="#add_geometry_to_ozfs" id="toc-add_geometry_to_ozfs" class="nav-link" data-scroll-target="#add_geometry_to_ozfs">add_geometry_to_ozfs</a></li>
+  <li><a href="#everything-together" id="toc-everything-together" class="nav-link" data-scroll-target="#everything-together">Everything together</a></li>
+  </ul></li>
+  <li><a href="#inputs-1" id="toc-inputs-1" class="nav-link" data-scroll-target="#inputs-1">Inputs</a>
+  <ul>
+  <li><a href="#atlas_df" id="toc-atlas_df" class="nav-link" data-scroll-target="#atlas_df">atlas_df</a></li>
+  <li><a href="#boundary_file_path" id="toc-boundary_file_path" class="nav-link" data-scroll-target="#boundary_file_path">boundary_file_path</a></li>
+  <li><a href="#col_descriptions" id="toc-col_descriptions" class="nav-link" data-scroll-target="#col_descriptions">col_descriptions</a></li>
+  <li><a href="#use_type_indicators" id="toc-use_type_indicators" class="nav-link" data-scroll-target="#use_type_indicators">use_type_indicators</a></li>
+  </ul></li>
+  <li><a href="#example-converting-azle-data-from-nza-to-ozfs" id="toc-example-converting-azle-data-from-nza-to-ozfs" class="nav-link" data-scroll-target="#example-converting-azle-data-from-nza-to-ozfs">Example: Converting Azle data from NZA to OZFS</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">National Zoning Atlas to OZFS Code</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>The data we used was already in a computer friendly format following the <a href="https://www.zoningatlas.org/">National Zoning Atlas</a> guidelines. This page explains in detail the r functions made to convert the NZA data to OZFS format.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<section id="functions" class="level3">
+<h3 class="anchored" data-anchor-id="functions">Functions</h3>
+<p>The list below shows the functions we created. The indentations show functions used in other functions.</p>
+<ul>
+<li><a href="#atlas_to_ozfs">atlas_to_ozfs</a>
+<ul>
+<li><a href="#organize_features">organize_features</a>
+<ul>
+<li><a href="#separate_uses">separate_uses</a></li>
+<li><a href="#add_uses_permitted_column">add_uses_permitted_column</a></li>
+<li><a href="#update_uses_permitted">update_uses_permitted</a></li>
+<li><a href="#make_constraints_section">make_constraints_section</a>
+<ul>
+<li><a href="#organize_rules">organize_rules</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#write_list_as_json">write_list_as_json</a></li>
+<li><a href="#add_geometry_to_ozfs">add_geometry_to_ozfs</a></li>
+</ul>
+</section>
+<section id="inputs" class="level3">
+<h3 class="anchored" data-anchor-id="inputs">Inputs</h3>
+<p><strong>Necessary inputs:</strong></p>
+<ul>
+<li><a href="#atlas_df">atlas_df</a>: a data frame created from an excel file that has isolated the NZA data for just one city. This takes some <a href="../qmd/atlas_to_ozfs_howto.html">manual formatting</a></li>
+<li><a href="#col_descriptions">col_descriptions</a>: a data frame created from an excel file that lists all the column names and some descriptions of those columns. (like the units and whether it is min or max value )</li>
+<li><a href="#use_type_indicators">use_type_indicators:</a> a unique list I made fad</li>
+<li><a href="#boundary_file_path">boundary_file_path</a>: a path to the geojson file containing the district boundary geometry of the city</li>
+</ul>
+<p><strong>Optional Inputs</strong></p>
+<ul>
+<li><em>created_by:</em> The name of the person who first converted the data into OZFS</li>
+<li><em>creation_date:</em> The date the data was first converted the into OZFS</li>
+<li><em>updated_by:</em> The name of the person who updated the OZFS structure</li>
+</ul>
+</section>
+<section id="packages" class="level3">
+<h3 class="anchored" data-anchor-id="packages">Packages</h3>
+<p>The following R packages are needed to run the functions we created.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rjson)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="functions-1" class="level2">
+<h2 class="anchored" data-anchor-id="functions-1">Functions</h2>
+<section id="atlas_to_ozfs" class="level3">
+<h3 class="anchored" data-anchor-id="atlas_to_ozfs">atlas_to_ozfs</h3>
+This is the main function that is used to convert the data from the excel file (formatted according to NZA standards) to a geojson file (formatted according to OZFS standards). <br>
+<details>
+<summary>
+Code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>atlas_to_ozfs <span class="ot">&lt;-</span> <span class="cf">function</span>(atlas_df, col_descriptions, use_type_indicators,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                          <span class="at">created_by =</span> <span class="st">"Kamryn Mansfield"</span>, <span class="at">creation_date =</span> <span class="st">"2024-09-30"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                          <span class="at">updated_by =</span> <span class="st">"Kamryn Mansfield"</span>){</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># start the empty list</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  ozfs_format <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">type =</span> <span class="st">"FeatureCollection"</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                      <span class="at">metadata =</span> <span class="fu">list</span>(<span class="at">muni_name =</span> atlas_df[[<span class="dv">1</span>,<span class="st">"muni_name"</span>]],</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">county_name =</span> atlas_df[[<span class="dv">1</span>, <span class="st">"county"</span>]]),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                      <span class="at">features =</span> <span class="fu">list</span>())</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># loop through each row of atlas_df</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(atlas_df)){</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    atlas_row_df <span class="ot">&lt;-</span> atlas_df[i,]</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    ozfs_format<span class="sc">$</span>features[[i]] <span class="ot">&lt;-</span> <span class="fu">organize_features</span>(atlas_row_df, col_descriptions, use_type_indicators,</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>                                                   created_by, creation_date,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>                                                   updated_by)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  ozfs_format</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</section>
+<section id="organize_features" class="level3">
+<h3 class="anchored" data-anchor-id="organize_features">organize_features</h3>
+<p>This function takes one row of the excel data (data for one district) and formats it to eventually become a one feature of the geojson</p>
+<details>
+<summary>
+Code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>organize_features <span class="ot">&lt;-</span> <span class="cf">function</span>(atlas_row_df, col_descriptions, use_type_indicators, created_by, creation_date, updated_by){</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">#start with a bare list for the features data to fill</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  features_list <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">type =</span> <span class="st">"Feature"</span>, </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>                        <span class="at">properties =</span> <span class="fu">list</span>(),</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>                        <span class="at">geometry =</span> <span class="fu">list</span>())</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># make a df for each land use</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  wanted_columns <span class="ot">&lt;-</span> col_descriptions<span class="sc">$</span>col_name</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  separated_uses <span class="ot">&lt;-</span> <span class="fu">separate_uses</span>(atlas_row_df, use_type_indicators, wanted_columns)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># fill out the dist_info section</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  features_list<span class="sc">$</span>properties<span class="sc">$</span>dist_info[[<span class="st">"dist_name"</span>]] <span class="ot">&lt;-</span> atlas_row_df[[<span class="dv">1</span>,<span class="st">"dist_name"</span>]]</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  features_list<span class="sc">$</span>properties<span class="sc">$</span>dist_info[[<span class="st">"dist_abbr"</span>]] <span class="ot">&lt;-</span> atlas_row_df[[<span class="dv">1</span>,<span class="st">"dist_abbr"</span>]]</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  features_list<span class="sc">$</span>properties<span class="sc">$</span>dist_info[[<span class="st">"dist_type"</span>]] <span class="ot">&lt;-</span> atlas_row_df[[<span class="dv">1</span>,<span class="st">"dist_type"</span>]]</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  features_list<span class="sc">$</span>properties<span class="sc">$</span>dist_info[[<span class="st">"created_by"</span>]] <span class="ot">&lt;-</span> created_by</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  features_list<span class="sc">$</span>properties<span class="sc">$</span>dist_info[[<span class="st">"created_date"</span>]] <span class="ot">&lt;-</span> creation_date</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>  features_list<span class="sc">$</span>properties<span class="sc">$</span>dist_info[[<span class="st">"updated_by"</span>]] <span class="ot">&lt;-</span> updated_by</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  features_list<span class="sc">$</span>properties<span class="sc">$</span>dist_info[[<span class="st">"updated_date"</span>]] <span class="ot">&lt;-</span> <span class="fu">as.character</span>(<span class="fu">Sys.Date</span>())</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># fill out uses permitted</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  updated_atlas_row_df <span class="ot">&lt;-</span> <span class="fu">add_uses_permitted_column</span>(atlas_row_df, use_type_indicators)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  features_list <span class="ot">&lt;-</span> <span class="fu">update_uses_permitted</span>(features_list,updated_atlas_row_df)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># prepare to loop through the other three sections</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>  lot_constraints <span class="ot">&lt;-</span> col_descriptions <span class="sc">|&gt;</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(col_name <span class="sc">%in%</span> <span class="fu">substr</span>(<span class="fu">names</span>(atlas_row_df), <span class="dv">1</span>, <span class="fu">nchar</span>(<span class="fu">names</span>(atlas_row_df)) <span class="sc">-</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(heading <span class="sc">==</span> <span class="st">"lot_constraints"</span>)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  structure_constraints <span class="ot">&lt;-</span> col_descriptions <span class="sc">|&gt;</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(col_name <span class="sc">%in%</span> <span class="fu">substr</span>(<span class="fu">names</span>(atlas_row_df), <span class="dv">1</span>, <span class="fu">nchar</span>(<span class="fu">names</span>(atlas_row_df)) <span class="sc">-</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(heading <span class="sc">==</span> <span class="st">"structure_constraints"</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  other_constraints <span class="ot">&lt;-</span> col_descriptions <span class="sc">|&gt;</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(col_name <span class="sc">%in%</span> <span class="fu">substr</span>(<span class="fu">names</span>(atlas_row_df), <span class="dv">1</span>, <span class="fu">nchar</span>(<span class="fu">names</span>(atlas_row_df)) <span class="sc">-</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(heading <span class="sc">==</span> <span class="st">"other_constraints"</span>)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>  features_list<span class="sc">$</span>properties<span class="sc">$</span>lot_constraints <span class="ot">&lt;-</span> <span class="fu">make_constraints_section</span>(lot_constraints, <span class="st">"lot_constraints"</span>, separated_uses)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>  features_list<span class="sc">$</span>properties<span class="sc">$</span>structure_constraints <span class="ot">&lt;-</span> <span class="fu">make_constraints_section</span>(structure_constraints, <span class="st">"structure_constraints"</span>, separated_uses)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>  features_list<span class="sc">$</span>properties<span class="sc">$</span>other_constraints <span class="ot">&lt;-</span> <span class="fu">make_constraints_section</span>(other_constraints, <span class="st">"other_constraints"</span>, separated_uses)</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>  features_list</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>  <span class="co"># add the uses permitted columns df</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>  muni_atlas_df <span class="ot">&lt;-</span> <span class="fu">add_uses_permitted_column</span>(atlas_row_df, </span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>                                             use_type_indicators)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>  <span class="co"># finish by adding the lists of uses into the district info</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>  features_list <span class="ot">&lt;-</span> <span class="fu">update_uses_permitted</span>(features_list, </span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>                                     muni_atlas_df)</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>  features_list</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</section>
+<section id="separate_uses" class="level3">
+<h3 class="anchored" data-anchor-id="separate_uses">separate_uses</h3>
+<details>
+<summary>
+Code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">#### Creating a new data frame for each use type ####</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>separate_uses <span class="ot">&lt;-</span> <span class="cf">function</span>(df, use_type_indicators, wanted_columns){</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  list_of_use_tables <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(use_type_indicators)){</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    cols_we_want <span class="ot">&lt;-</span> <span class="fu">grep</span>(use_type_indicators[[i]], <span class="fu">names</span>(df), <span class="at">value =</span> T)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    new_df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>      <span class="fu">select</span>(<span class="fu">all_of</span>(cols_we_want))</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">names</span>(new_df) <span class="ot">&lt;-</span> <span class="fu">str_replace_all</span>(<span class="fu">names</span>(new_df), use_type_indicators[[i]] , <span class="st">""</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># new_df &lt;- new_df |&gt;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">#   select(any_of(wanted_columns))</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    list_of_use_tables[[<span class="fu">names</span>(use_type_indicators[i])]] <span class="ot">&lt;-</span> new_df</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>  list_of_use_tables</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</section>
+<section id="add_uses_permitted_column" class="level3">
+<h3 class="anchored" data-anchor-id="add_uses_permitted_column">add_uses_permitted_column</h3>
+<details>
+<summary>
+Code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># adding columns with lists of uses_permitted and uses_permitted_exception</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>add_uses_permitted_column <span class="ot">&lt;-</span> <span class="cf">function</span>(df, use_type_indicators){</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> <span class="fu">mutate</span>(df, <span class="at">uses_permitted =</span> <span class="fu">vector</span>(<span class="st">"list"</span>, <span class="fu">n</span>()),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>               <span class="at">uses_permitted_exception =</span> <span class="fu">vector</span>(<span class="st">"list"</span>, <span class="fu">n</span>()))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  uses_permitted_df <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(dist_abbr,<span class="fu">all_of</span>(<span class="fu">grep</span>(<span class="st">"use_permitted"</span>,<span class="fu">names</span>(df), <span class="at">value =</span> T)))</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(df)){</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    uses_permitted_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    uses_exception_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(use_type_indicators)){</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>      cols_we_want <span class="ot">&lt;-</span> <span class="fu">grep</span>(use_type_indicators[[i]], <span class="fu">names</span>(uses_permitted_df), <span class="at">value =</span> T)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>      field_to_check <span class="ot">&lt;-</span> uses_permitted_df[[j,cols_we_want]]</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(field_to_check) <span class="sc">&amp;</span> field_to_check <span class="sc">==</span> <span class="st">"Allowed/Conditional"</span>){</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        uses_permitted_list <span class="ot">&lt;-</span> <span class="fu">append</span>(uses_permitted_list, <span class="fu">names</span>(use_type_indicators[i]))</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        uses_exception_list <span class="ot">&lt;-</span> <span class="fu">append</span>(uses_exception_list, <span class="fu">names</span>(use_type_indicators[i]))</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> <span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.na</span>(field_to_check) <span class="sc">&amp;</span> field_to_check <span class="sc">==</span> <span class="st">"Public Hearing"</span>){</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        uses_exception_list <span class="ot">&lt;-</span> <span class="fu">append</span>(uses_exception_list, <span class="fu">names</span>(use_type_indicators[i]))</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    df<span class="sc">$</span>uses_permitted[[j]] <span class="ot">&lt;-</span> uses_permitted_list</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    df<span class="sc">$</span>uses_permitted_exception[[j]] <span class="ot">&lt;-</span> uses_exception_list</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>  df</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</section>
+<section id="update_uses_permitted" class="level3">
+<h3 class="anchored" data-anchor-id="update_uses_permitted">update_uses_permitted</h3>
+<details>
+<summary>
+Code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># takes in the geojson formatted data and </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the updated df that has the uses_permitted lists in it</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>update_uses_permitted <span class="ot">&lt;-</span> <span class="cf">function</span>(geojson_formatted_data, updated_df){</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># name the variable that I will be using a bit to plug in and test things.</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    uses_permitted <span class="ot">&lt;-</span> updated_df[[<span class="dv">1</span>, <span class="st">"uses_permitted"</span>]][[<span class="dv">1</span>]]</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    uses_permit_exception <span class="ot">&lt;-</span> updated_df[[<span class="dv">1</span>, <span class="st">"uses_permitted_exception"</span>]][[<span class="dv">1</span>]]</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">#replace the geojson_formatted_data with the value in the updated_df</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">length</span>(uses_permitted) <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>      geojson_formatted_data<span class="sc">$</span>properties<span class="sc">$</span>dist_info<span class="sc">$</span>uses_permitted<span class="sc">$</span>uses_value <span class="ot">&lt;-</span> uses_permitted</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>      geojson_formatted_data<span class="sc">$</span>properties<span class="sc">$</span>dist_info<span class="sc">$</span>uses_permitted<span class="sc">$</span>uses_value <span class="ot">&lt;-</span> <span class="st">"none"</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    <span class="co">#find out if there is an exception and add that</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">length</span>(uses_permit_exception) <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">identical</span>(uses_permit_exception, uses_permitted)){</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>      geojson_formatted_data<span class="sc">$</span>properties<span class="sc">$</span>dist_info<span class="sc">$</span>uses_permitted<span class="sc">$</span>excep_allowed <span class="ot">&lt;-</span> <span class="cn">TRUE</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>      geojson_formatted_data<span class="sc">$</span>properties<span class="sc">$</span>dist_info<span class="sc">$</span>uses_permitted<span class="sc">$</span>excep_value <span class="ot">&lt;-</span> uses_permit_exception</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>      geojson_formatted_data<span class="sc">$</span>properties<span class="sc">$</span>dist_info<span class="sc">$</span>uses_permitted<span class="sc">$</span>excep_allowed <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  geojson_formatted_data</span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</section>
+<section id="make_constraints_section" class="level3">
+<h3 class="anchored" data-anchor-id="make_constraints_section">make_constraints_section</h3>
+<details>
+<summary>
+Code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>make_constraints_section <span class="ot">&lt;-</span> <span class="cf">function</span>(constraints_df, constraints_section, separated_uses){</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># start the empty list</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  constraint_list <span class="ot">&lt;-</span> <span class="fu">list</span>() </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="co"># loop through the constraints section</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(constraints_df)){</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    constraint_name <span class="ot">&lt;-</span> constraints_df[[i,<span class="st">"col_name"</span>]]</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># loop through each separated df and list the uses and their values</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    use_name <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    value <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(separated_uses)){</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>      <span class="co"># one of the separated land use dfs wiht only the columns pertaining to the constraint we are on</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>      separated_use_df <span class="ot">&lt;-</span> separated_uses[[j]][,<span class="fu">grep</span>(constraint_name,<span class="fu">names</span>(separated_uses[[j]]))]</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>      <span class="co"># the name of the active df</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>      separated_use_name <span class="ot">&lt;-</span> <span class="fu">names</span>(separated_uses[j])</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>      <span class="co"># create variables to hold the info</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>      use_name <span class="ot">&lt;-</span> <span class="fu">c</span>(use_name, separated_use_name)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>      <span class="co"># not every use has the column, so we need to add NA</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">ncol</span>(separated_use_df) <span class="sc">==</span> <span class="dv">1</span>){</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        value <span class="ot">&lt;-</span> <span class="fu">c</span>(value, <span class="fu">as.character</span>(separated_use_df[[<span class="dv">1</span>, <span class="dv">1</span>]]))</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> <span class="cf">if</span> (<span class="fu">ncol</span>(separated_use_df) <span class="sc">&gt;</span> <span class="dv">1</span>){ </span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>        value <span class="ot">&lt;-</span> <span class="fu">c</span>(value, <span class="fu">as.character</span>(separated_use_df[[<span class="dv">1</span>, <span class="dv">2</span>]]))</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>      }<span class="cf">else</span> {</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>        value <span class="ot">&lt;-</span> <span class="fu">c</span>(value, <span class="cn">NA</span>)</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># take uses and values to create </span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># a df with values and land uses that share that value</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>    values_uses_df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">use_name =</span> use_name,</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>                                 <span class="at">value =</span> value) <span class="sc">|&gt;</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>      <span class="fu">group_by</span>(value) <span class="sc">|&gt;</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>      <span class="fu">summarise</span>(<span class="at">use_name =</span> <span class="fu">list</span>(use_name)) <span class="sc">|&gt;</span> </span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>      <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(value))</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">nrow</span>(values_uses_df) <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>      <span class="co"># loop through the values_uses_df to add values to the geojson</span></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> (l <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(values_uses_df)){</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>        <span class="co"># add length to the list so it can hold multiple things</span></span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(constraint_list[[constraint_name]])) {</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>          <span class="fu">length</span>(constraint_list[[constraint_name]]) <span class="ot">&lt;-</span> l</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a>        <span class="co"># add the units</span></span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>        constraint_list[[constraint_name]][[l]]<span class="sc">$</span>unit <span class="ot">&lt;-</span> constraints_df[[i,<span class="st">"units"</span>]]</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a>        <span class="co"># adding the use_name</span></span>
+<span id="cb7-57"><a href="#cb7-57" aria-hidden="true" tabindex="-1"></a>        constraint_list[[constraint_name]][[l]]<span class="sc">$</span>use_name <span class="ot">&lt;-</span> values_uses_df<span class="sc">$</span>use_name[[l]]</span>
+<span id="cb7-58"><a href="#cb7-58" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-59"><a href="#cb7-59" aria-hidden="true" tabindex="-1"></a>        <span class="co"># min or max value</span></span>
+<span id="cb7-60"><a href="#cb7-60" aria-hidden="true" tabindex="-1"></a>        max_min_field <span class="ot">&lt;-</span> constraints_df[[i,<span class="st">"min_or_max"</span>]]</span>
+<span id="cb7-61"><a href="#cb7-61" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(max_min_field) <span class="sc">&amp;</span> max_min_field <span class="sc">==</span> <span class="st">"min"</span>){</span>
+<span id="cb7-62"><a href="#cb7-62" aria-hidden="true" tabindex="-1"></a>          values_uses_first_use <span class="ot">&lt;-</span> values_uses_df<span class="sc">$</span>use_name[[l]][[<span class="dv">1</span>]]</span>
+<span id="cb7-63"><a href="#cb7-63" aria-hidden="true" tabindex="-1"></a>          df_with_rules <span class="ot">&lt;-</span> separated_uses[[values_uses_first_use]][,<span class="fu">grep</span>(constraint_name,<span class="fu">names</span>(separated_uses[[values_uses_first_use]]))]</span>
+<span id="cb7-64"><a href="#cb7-64" aria-hidden="true" tabindex="-1"></a>          <span class="cf">if</span> (<span class="fu">ncol</span>(df_with_rules) <span class="sc">&gt;</span> <span class="dv">1</span>){</span>
+<span id="cb7-65"><a href="#cb7-65" aria-hidden="true" tabindex="-1"></a>            constraint_list[[constraint_name]][[l]]<span class="sc">$</span>min_val <span class="ot">&lt;-</span> <span class="fu">organize_rules</span>(df_with_rules)</span>
+<span id="cb7-66"><a href="#cb7-66" aria-hidden="true" tabindex="-1"></a>          } <span class="cf">else</span> {</span>
+<span id="cb7-67"><a href="#cb7-67" aria-hidden="true" tabindex="-1"></a>            constraint_list[[constraint_name]][[l]]<span class="sc">$</span>min_val<span class="sc">$</span>expression <span class="ot">&lt;-</span> <span class="fu">as.character</span>(df_with_rules[[<span class="dv">1</span>,<span class="dv">1</span>]])</span>
+<span id="cb7-68"><a href="#cb7-68" aria-hidden="true" tabindex="-1"></a>          }</span>
+<span id="cb7-69"><a href="#cb7-69" aria-hidden="true" tabindex="-1"></a>          </span>
+<span id="cb7-70"><a href="#cb7-70" aria-hidden="true" tabindex="-1"></a>        } <span class="cf">else</span> <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.na</span>(max_min_field) <span class="sc">&amp;</span> max_min_field <span class="sc">==</span> <span class="st">"max"</span>){</span>
+<span id="cb7-71"><a href="#cb7-71" aria-hidden="true" tabindex="-1"></a>          values_uses_first_use <span class="ot">&lt;-</span> values_uses_df<span class="sc">$</span>use_name[[l]][[<span class="dv">1</span>]]</span>
+<span id="cb7-72"><a href="#cb7-72" aria-hidden="true" tabindex="-1"></a>          df_with_rules <span class="ot">&lt;-</span> separated_uses[[values_uses_first_use]][,<span class="fu">grep</span>(constraint_name,<span class="fu">names</span>(separated_uses[[values_uses_first_use]]))]</span>
+<span id="cb7-73"><a href="#cb7-73" aria-hidden="true" tabindex="-1"></a>          <span class="cf">if</span> (<span class="fu">ncol</span>(df_with_rules) <span class="sc">&gt;</span> <span class="dv">1</span>){</span>
+<span id="cb7-74"><a href="#cb7-74" aria-hidden="true" tabindex="-1"></a>            constraint_list[[constraint_name]][[l]]<span class="sc">$</span>max_val <span class="ot">&lt;-</span> <span class="fu">organize_rules</span>(df_with_rules)</span>
+<span id="cb7-75"><a href="#cb7-75" aria-hidden="true" tabindex="-1"></a>          } <span class="cf">else</span> {</span>
+<span id="cb7-76"><a href="#cb7-76" aria-hidden="true" tabindex="-1"></a>            constraint_list[[constraint_name]][[l]]<span class="sc">$</span>max_val<span class="sc">$</span>expression <span class="ot">&lt;-</span> <span class="fu">as.character</span>(df_with_rules[[<span class="dv">1</span>,<span class="dv">1</span>]])</span>
+<span id="cb7-77"><a href="#cb7-77" aria-hidden="true" tabindex="-1"></a>          }</span>
+<span id="cb7-78"><a href="#cb7-78" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb7-79"><a href="#cb7-79" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb7-80"><a href="#cb7-80" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb7-81"><a href="#cb7-81" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-82"><a href="#cb7-82" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-83"><a href="#cb7-83" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb7-84"><a href="#cb7-84" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-85"><a href="#cb7-85" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-86"><a href="#cb7-86" aria-hidden="true" tabindex="-1"></a>  constraint_list</span>
+<span id="cb7-87"><a href="#cb7-87" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</section>
+<section id="organize_rules" class="level3">
+<h3 class="anchored" data-anchor-id="organize_rules">organize_rules</h3>
+<details>
+<summary>
+Code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="do">#### THIS ORGANIZES THE LISTS UNDER CONSTRAINT VALUES ####</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># df_with_rules = dataframe with all the columns </span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">#   for the rules of one of the variables selected.</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># This dataframe must have ncol &gt; 1</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>organize_rules <span class="ot">&lt;-</span> <span class="cf">function</span>(df_with_rules){</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># find out how many rules there are</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  counter <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  df <span class="ot">&lt;-</span> df_with_rules[<span class="dv">1</span>,<span class="fu">grep</span>(<span class="fu">paste0</span>(<span class="st">"rule"</span>, counter), <span class="fu">names</span>(df_with_rules))]</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> (<span class="fu">ncol</span>(df) <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    counter <span class="ot">&lt;-</span> counter <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    df <span class="ot">&lt;-</span> df_with_rules[<span class="dv">1</span> ,<span class="fu">grep</span>(<span class="fu">paste0</span>(<span class="st">"rule"</span>, counter), <span class="fu">names</span>(df_with_rules))]</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="co"># loop through each rule and make it a list</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>  all_rule_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(counter <span class="sc">-</span> <span class="dv">1</span>)){</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># create a list that we will keep adding to</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    rule_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># New df with an isolated rule</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>    rule_df <span class="ot">&lt;-</span> df_with_rules[ ,<span class="fu">grep</span>(<span class="fu">paste0</span>(<span class="st">"rule"</span>, i), <span class="fu">names</span>(df_with_rules))]</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if it has one of the fields, we will add it to rule_list</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># logical_operator</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">sum</span>(<span class="fu">grep</span>(<span class="st">"logical_operator"</span>, <span class="fu">names</span>(rule_df))) <span class="sc">&gt;</span> <span class="dv">0</span> ){</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>      <span class="co"># assign value to logical_operator</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>      rule_list<span class="sc">$</span>logical_operator <span class="ot">&lt;-</span> rule_df[[<span class="dv">1</span>, <span class="fu">grep</span>(<span class="st">"logical_operator"</span>,<span class="fu">names</span>(rule_df))]]</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>    <span class="co"># conditions</span></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">sum</span>(<span class="fu">grep</span>(<span class="st">"condition"</span>, <span class="fu">names</span>(rule_df))) <span class="sc">&gt;</span> <span class="dv">0</span> ){</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>      <span class="co"># make a df to assign multiple values to the array of conditions</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>      condition_df <span class="ot">&lt;-</span> rule_df[ , <span class="fu">grep</span>(<span class="st">"condition"</span>,<span class="fu">names</span>(rule_df))]</span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(condition_df)){</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>        rule_list<span class="sc">$</span>conditions[[j]] <span class="ot">&lt;-</span> condition_df[[<span class="dv">1</span>,j]]</span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>    <span class="co"># select</span></span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">sum</span>(<span class="fu">grep</span>(<span class="st">"select"</span>, <span class="fu">names</span>(rule_df))) <span class="sc">&gt;</span> <span class="dv">0</span> ){</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>      <span class="co"># assign value to select</span></span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>      rule_list<span class="sc">$</span>select <span class="ot">&lt;-</span> rule_df[[<span class="dv">1</span>, <span class="fu">grep</span>(<span class="st">"select"</span>,<span class="fu">names</span>(rule_df))]]</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>    <span class="co"># expression(s)</span></span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">sum</span>(<span class="fu">grep</span>(<span class="st">"expression"</span>, <span class="fu">names</span>(rule_df))) <span class="sc">&gt;</span> <span class="dv">0</span> ){</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>      <span class="co"># make a df to see if it is more than one expression and to extract data</span></span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>      df_expression <span class="ot">&lt;-</span> rule_df[ , <span class="fu">grep</span>(<span class="fu">paste0</span>(<span class="st">"expression"</span>), <span class="fu">names</span>(rule_df))]</span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (<span class="fu">ncol</span>(df_expression) <span class="sc">&gt;</span> <span class="dv">1</span>){ <span class="co"># if it is multiple expressions</span></span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(df_expression)){</span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>          rule_list<span class="sc">$</span>expressions[[j]] <span class="ot">&lt;-</span> df_expression[[<span class="dv">1</span>,j]]</span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> { <span class="co"># if it is just one expression</span></span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>        <span class="co"># assign the value to the expression</span></span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>        rule_list<span class="sc">$</span>expression <span class="ot">&lt;-</span> rule_df[[<span class="dv">1</span>, <span class="fu">grep</span>(<span class="st">"expression"</span>,<span class="fu">names</span>(rule_df))]]</span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>      </span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>    <span class="co"># add each rule list to the total rules list</span></span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>    all_rule_list[[i]] <span class="ot">&lt;-</span> rule_list</span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>  all_rule_list  </span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</section>
+<section id="write_list_as_json" class="level3">
+<h3 class="anchored" data-anchor-id="write_list_as_json">write_list_as_json</h3>
+<details>
+<summary>
+Code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>write_list_as_json <span class="ot">&lt;-</span> <span class="cf">function</span>(list, file_directory){</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  json <span class="ot">&lt;-</span> <span class="fu">toJSON</span>(list)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">write</span>(json, file_directory)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</section>
+<section id="add_geometry_to_ozfs" class="level3">
+<h3 class="anchored" data-anchor-id="add_geometry_to_ozfs">add_geometry_to_ozfs</h3>
+<details>
+<summary>
+Code
+</summary>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>add_geometry_to_ozfs <span class="ot">&lt;-</span> <span class="cf">function</span>(boundary_file_path, ozfs_list){</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  boundaries <span class="ot">&lt;-</span> rjson<span class="sc">::</span><span class="fu">fromJSON</span>(<span class="at">file =</span> boundary_file_path)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(ozfs_list<span class="sc">$</span>features)){</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(boundaries<span class="sc">$</span>features)){</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (ozfs_list<span class="sc">$</span>features[[i]]<span class="sc">$</span>properties<span class="sc">$</span>dist_info<span class="sc">$</span>dist_abbr <span class="sc">==</span> boundaries<span class="sc">$</span>features[[j]]<span class="sc">$</span>properties<span class="sc">$</span><span class="st">`</span><span class="at">Abbreviated District Name</span><span class="st">`</span>){</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>        ozfs_list<span class="sc">$</span>features[[i]]<span class="sc">$</span>geometry <span class="ot">&lt;-</span> boundaries<span class="sc">$</span>features[[j]]<span class="sc">$</span>geometry</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  ozfs_list</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</details>
+</section>
+<section id="everything-together" class="level3">
+<h3 class="anchored" data-anchor-id="everything-together">Everything together</h3>
+<p>With a list of cleaned excel file directories and a corresponding list of geometries, create and OZFS file for each one.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>make_ozfs <span class="ot">&lt;-</span> <span class="cf">function</span>(list_nza_excels, list_geometries, new_folder_to_save_to){</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  col_descriptions <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"files/atlas_to_ozfs/col_descriptions.xlsx"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  use_type_indicators <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">`</span><span class="at">1_family</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_1"</span>, </span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>                            <span class="st">`</span><span class="at">2_family</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_2"</span>,</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>                            <span class="st">`</span><span class="at">3_family</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_3"</span>,</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>                            <span class="st">`</span><span class="at">4_family</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_4"</span>,</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>                            <span class="st">`</span><span class="at">ADU</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_adu"</span>,</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>                            <span class="st">`</span><span class="at">Affordable_Housing</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_ah"</span>,</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>                            <span class="st">`</span><span class="at">Planned_Residential_Development</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_prd"</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  errors <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  error_messages <span class="ot">&lt;-</span> <span class="fu">c</span>()</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(list_nza_excels)){</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    nza_excel <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(list_nza_excels[[i]])</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    file_name <span class="ot">&lt;-</span> <span class="fu">basename</span>(list_nza_excels[[i]])</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    file_name_no_ext <span class="ot">&lt;-</span> <span class="fu">sub</span>(<span class="st">".xlsx"</span>,<span class="st">""</span>,file_name)</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>    ozfs_list_format <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Code that might throw an error</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">atlas_to_ozfs</span>(nza_excel, col_descriptions, use_type_indicators)</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>  },</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">error =</span> <span class="cf">function</span>(e) {</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Code to run if an error occurs</span></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>    errors <span class="ot">&lt;-</span> <span class="fu">c</span>(errors, list_nza_excels[[i]])</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    error_messages <span class="ot">&lt;-</span> <span class="fu">c</span>(error_messages, e<span class="sc">$</span>message)</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">next</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a>    ozfs_list_with_geom <span class="ot">&lt;-</span> <span class="fu">add_geometry_to_ozfs</span>(list_geometries[[i]], ozfs_list_format)</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>    new_file_directory <span class="ot">&lt;-</span> <span class="fu">paste0</span>(new_folder_to_save_to,city_name, file_name_no_ext, <span class="st">".geojson"</span>)</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a>    <span class="fu">write_list_as_json</span>(ozfs_list_format, new_file_directory)</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="inputs-1" class="level2">
+<h2 class="anchored" data-anchor-id="inputs-1">Inputs</h2>
+<section id="atlas_df" class="level3">
+<h3 class="anchored" data-anchor-id="atlas_df">atlas_df</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the excel file with NZA data from excel</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>azle_xl <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"files/atlas_to_ozfs/Zoning_Atlas_Azle.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 5%">
+<col style="width: 7%">
+<col style="width: 13%">
+<col style="width: 5%">
+<col style="width: 11%">
+<col style="width: 5%">
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">muni_name</th>
+<th style="text-align: left;">county</th>
+<th style="text-align: left;">dist_abbr</th>
+<th style="text-align: left;">dist_name</th>
+<th style="text-align: left;">mapped</th>
+<th style="text-align: left;">mapped_extinct</th>
+<th style="text-align: left;">overlay</th>
+<th style="text-align: left;">dist_type</th>
+<th style="text-align: left;">aff_housing_dist</th>
+<th style="text-align: left;">elder_housing_dist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Azle</td>
+<td style="text-align: left;">Tarrant</td>
+<td style="text-align: left;">E-1</td>
+<td style="text-align: left;">Estate One</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Primarily Residential</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Azle</td>
+<td style="text-align: left;">Tarrant</td>
+<td style="text-align: left;">E-2</td>
+<td style="text-align: left;">Estate Two</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Primarily Residential</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Azle</td>
+<td style="text-align: left;">Tarrant</td>
+<td style="text-align: left;">E-3</td>
+<td style="text-align: left;">Estate Three</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Primarily Residential</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Azle</td>
+<td style="text-align: left;">Tarrant</td>
+<td style="text-align: left;">SF-1</td>
+<td style="text-align: left;">Single-Family One</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Primarily Residential</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Azle</td>
+<td style="text-align: left;">Tarrant</td>
+<td style="text-align: left;">SF-2</td>
+<td style="text-align: left;">Single-Family Two</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Primarily Residential</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">No</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="boundary_file_path" class="level3">
+<h3 class="anchored" data-anchor-id="boundary_file_path">boundary_file_path</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the file path for the geojson with district boundaries for Azle, TX</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>azle_boundaries_path <span class="ot">&lt;-</span> <span class="st">"files/atlas_to_ozfs/Azle_ZoningToJSON.geojson"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(azle_boundaries_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "files/atlas_to_ozfs/Azle_ZoningToJSON.geojson"</code></pre>
+</div>
+</div>
+</section>
+<section id="col_descriptions" class="level3">
+<h3 class="anchored" data-anchor-id="col_descriptions">col_descriptions</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the excel file describing the constraint names, units, and things</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>col_descriptions <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"files/atlas_to_ozfs/col_descriptions.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">col_name</th>
+<th style="text-align: left;">units</th>
+<th style="text-align: left;">min_or_max</th>
+<th style="text-align: left;">heading</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">lot_width</td>
+<td style="text-align: left;">feet</td>
+<td style="text-align: left;">min</td>
+<td style="text-align: left;">lot_constraints</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lot_size</td>
+<td style="text-align: left;">acres</td>
+<td style="text-align: left;">min</td>
+<td style="text-align: left;">lot_constraints</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">setback_front</td>
+<td style="text-align: left;">feet</td>
+<td style="text-align: left;">min</td>
+<td style="text-align: left;">structure_constraints</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">setback_side_int</td>
+<td style="text-align: left;">feet</td>
+<td style="text-align: left;">min</td>
+<td style="text-align: left;">structure_constraints</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">setback_side_ext</td>
+<td style="text-align: left;">feet</td>
+<td style="text-align: left;">min</td>
+<td style="text-align: left;">structure_constraints</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">setback_rear</td>
+<td style="text-align: left;">feet</td>
+<td style="text-align: left;">min</td>
+<td style="text-align: left;">structure_constraints</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">lot_cov_bldg</td>
+<td style="text-align: left;">percent</td>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">structure_constraints</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">lot_cov_imp</td>
+<td style="text-align: left;">percent</td>
+<td style="text-align: left;">max</td>
+<td style="text-align: left;">structure_constraints</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="use_type_indicators" class="level3">
+<h3 class="anchored" data-anchor-id="use_type_indicators">use_type_indicators</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vector with the different uses we will separate</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>use_type_indicators <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">`</span><span class="at">1_family</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_1"</span>, </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>                            <span class="st">`</span><span class="at">2_family</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_2"</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>                            <span class="st">`</span><span class="at">3_family</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_3"</span>,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>                            <span class="st">`</span><span class="at">4_family</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_4"</span>,</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>                            <span class="st">`</span><span class="at">ADU</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_adu"</span>,</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>                            <span class="st">`</span><span class="at">Affordable_Housing</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_ah"</span>,</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>                            <span class="st">`</span><span class="at">Planned_Residential_Development</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"_prd"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="example-converting-azle-data-from-nza-to-ozfs" class="level2">
+<h2 class="anchored" data-anchor-id="example-converting-azle-data-from-nza-to-ozfs">Example: Converting Azle data from NZA to OZFS</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>azle_ozfs <span class="ot">&lt;-</span> <span class="fu">atlas_to_ozfs</span>(azle_xl, col_descriptions, use_type_indicators)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>azle_ozfs <span class="ot">&lt;-</span> <span class="fu">add_geometry_to_ozfs</span>(azle_boundaries_path, azle_ozfs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Here is the structure of the first feature (excluding geometry) in the converted geojson file for Azle.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>List of 3
+ $ type      : chr "Feature"
+ $ properties:List of 4
+  ..$ dist_info            :List of 8
+  .. ..$ dist_name     : chr "Estate One"
+  .. ..$ dist_abbr     : chr "E-1"
+  .. ..$ dist_type     : chr "Primarily Residential"
+  .. ..$ created_by    : chr "Kamryn Mansfield"
+  .. ..$ created_date  : chr "2024-09-30"
+  .. ..$ updated_by    : chr "Kamryn Mansfield"
+  .. ..$ updated_date  : chr "2025-01-29"
+  .. ..$ uses_permitted:List of 2
+  .. .. ..$ uses_value   :List of 1
+  .. .. .. ..$ : chr "1_family"
+  .. .. ..$ excep_allowed: logi FALSE
+  ..$ lot_constraints      :List of 1
+  .. ..$ lot_size:List of 1
+  .. .. ..$ :List of 3
+  .. .. .. ..$ unit    : chr "acres"
+  .. .. .. ..$ use_name: chr "1_family"
+  .. .. .. ..$ min_val :List of 1
+  .. .. .. .. ..$ expression: chr "1"
+  ..$ structure_constraints:List of 6
+  .. ..$ setback_front   :List of 1
+  .. .. ..$ :List of 3
+  .. .. .. ..$ unit    : chr "feet"
+  .. .. .. ..$ use_name: chr "1_family"
+  .. .. .. ..$ min_val :List of 1
+  .. .. .. .. ..$ expression: chr "50"
+  .. ..$ setback_side_ext:List of 1
+  .. .. ..$ :List of 3
+  .. .. .. ..$ unit    : chr "feet"
+  .. .. .. ..$ use_name: chr "1_family"
+  .. .. .. ..$ min_val :List of 1
+  .. .. .. .. ..$ expression: chr "35"
+  .. ..$ setback_rear    :List of 1
+  .. .. ..$ :List of 3
+  .. .. .. ..$ unit    : chr "feet"
+  .. .. .. ..$ use_name: chr "1_family"
+  .. .. .. ..$ min_val :List of 1
+  .. .. .. .. ..$ expression: chr "35"
+  .. ..$ lot_cov_bldg    :List of 1
+  .. .. ..$ :List of 3
+  .. .. .. ..$ unit    : chr "percent"
+  .. .. .. ..$ use_name: chr "1_family"
+  .. .. .. ..$ max_val :List of 1
+  .. .. .. .. ..$ expression: chr "35"
+  .. ..$ stories         :List of 1
+  .. .. ..$ :List of 3
+  .. .. .. ..$ unit    : chr "stories"
+  .. .. .. ..$ use_name: chr "1_family"
+  .. .. .. ..$ max_val :List of 1
+  .. .. .. .. ..$ expression: chr "2.5"
+  .. ..$ unit_size       :List of 1
+  .. .. ..$ :List of 3
+  .. .. .. ..$ unit    : chr "square feet"
+  .. .. .. ..$ use_name: chr "1_family"
+  .. .. .. ..$ min_val :List of 1
+  .. .. .. .. ..$ expression: chr "2600"
+  ..$ other_constraints    :List of 1
+  .. ..$ parking:List of 1
+  .. .. ..$ :List of 3
+  .. .. .. ..$ unit    : chr "stalls"
+  .. .. .. ..$ use_name: chr "1_family"
+  .. .. .. ..$ min_val :List of 1
+  .. .. .. .. ..$ expression: chr "2"
+ $ geometry  : logi FALSE</code></pre>
+</div>
+<div class="cell-output-display">
+
+</div>
+</div>
+<p>And here is a sneak peak of what the geojson looks like. You can download the full geojson file <a href="files/atlas_to_ozfs/azle_ozfs_output.geojson">here</a>.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "{\"type\":\"FeatureCollection\",\"metadata\":{\"muni_name\":\"Azle\",\"county_name\":\"Tarrant\"},\"features\":[{\"type\":\"Feature\",\"properties\":{\"dist_info\":{\"dist_name\":\"Estate One\",\"dist_abbr\":\"E-1\",\"dist_type\":\"Primarily Residential\",\"created_by\":\"Kamryn Mansfield\",\"created_date\":\"2024-09-30\",\"updated_by\":\"Kamryn Mansfield\",\"updated_date\":\"2024-11-05\",\"uses_permitted\":{\"uses_value\":[\"1_family\"],\"excep_allowed\":false}},\"lot_constraints\":{\"lot_size\":[{\"unit\":\"acres\",\"use_name\":\"1_family\",\"min_val\":{\"expression\":\"1\"}}]},\"structure_constraints\":{\"setback_front\":[{\"unit\":\"feet\",\"use_name\":\"1_family\",\"min_val\":{\"expression\":\"50\"}}],\"setback_side_ext\":[{\"unit\":\"feet\",\"use_name\":\"1_family\",\"min_val\":{\"expression\":\"35\"}}],\"setback_rear\":[{\"unit\":\"feet\",\"use_name\":\"1_family\",\"min_val\":{\"expression\":\"35\"}}],\"lot_cov_bldg\":[{\"unit\":\"percent\",\"use_name\":\"1_family\",\"max_val\":{\"expression\":\"35\"}}],\"stories\":[{\"unit\":\"stories\",\"use_name\":\"1_family\",\"max_val\":{\"expression\":\"2.5\"}}],\"unit_size\":[{\"unit\":\"square feet\",\"use_name\":\"1_family\",\"min_val\":{\"expression\":\"2600\"}}]},\"other_constraints\":{\"parking\":[{\"unit\":\"stalls\",\"use_name\":\"1_family\",\"min_val\":{\"expression\":\"2\"}}]}},\"geometry\":{\"type\":\"MultiPolygon\",\"coo . . ."</code></pre>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
