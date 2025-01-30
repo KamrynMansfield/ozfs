@@ -175,24 +175,15 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
   <ul>
   <li><a href="#examples-of-tidybuilding-object" id="toc-examples-of-tidybuilding-object" class="nav-link" data-scroll-target="#examples-of-tidybuilding-object">Examples of tidybuilding object</a></li>
+  <li><a href="#fourplex-example" id="toc-fourplex-example" class="nav-link" data-scroll-target="#fourplex-example">Fourplex Example</a></li>
   </ul></li>
   <li><a href="#getting-prototype-buildings" id="toc-getting-prototype-buildings" class="nav-link" data-scroll-target="#getting-prototype-buildings">Getting Prototype Buildings</a>
   <ul>
   <li><a href="#wordsworth-st" id="toc-wordsworth-st" class="nav-link" data-scroll-target="#wordsworth-st">84 Wordsworth St</a>
   <ul class="collapse">
-  <li><a href="#tidybuilding-representation" id="toc-tidybuilding-representation" class="nav-link" data-scroll-target="#tidybuilding-representation">Tidybuilding Representation</a></li>
-  </ul></li>
-  <li><a href="#harvard-st" id="toc-harvard-st" class="nav-link" data-scroll-target="#harvard-st">416 Harvard St</a>
-  <ul class="collapse">
-  <li><a href="#tidybuilding-representation-1" id="toc-tidybuilding-representation-1" class="nav-link" data-scroll-target="#tidybuilding-representation-1">Tidybuilding Representation</a></li>
-  </ul></li>
-  <li><a href="#valentine-st" id="toc-valentine-st" class="nav-link" data-scroll-target="#valentine-st">8 Valentine St</a>
-  <ul class="collapse">
-  <li><a href="#tidybuilding-representation-2" id="toc-tidybuilding-representation-2" class="nav-link" data-scroll-target="#tidybuilding-representation-2">Tidybuilding Representation</a></li>
-  </ul></li>
-  <li><a href="#condor-st" id="toc-condor-st" class="nav-link" data-scroll-target="#condor-st">211 Condor St</a>
-  <ul class="collapse">
-  <li><a href="#tidybuilding-representation-3" id="toc-tidybuilding-representation-3" class="nav-link" data-scroll-target="#tidybuilding-representation-3">Tidybuilding Representation</a></li>
+  <li><a href="#simple-representation" id="toc-simple-representation" class="nav-link" data-scroll-target="#simple-representation">Simple Representation</a></li>
+  <li><a href="#more-complex-representation" id="toc-more-complex-representation" class="nav-link" data-scroll-target="#more-complex-representation">More Complex Representation</a></li>
+  <li><a href="#information-with-just-footprint-and-section-views" id="toc-information-with-just-footprint-and-section-views" class="nav-link" data-scroll-target="#information-with-just-footprint-and-section-views">Information with just footprint and section views</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -243,6 +234,312 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="examples-of-tidybuilding-object">Examples of tidybuilding object</h4>
 <p>The following are examples of what the data structure might look like for an object representing a building.</p>
 <p>Like tidyparcel, this may be more suitable to our needs if we have a list instead of a dataframe. What we will probably end up doing is having a list with some global information as the first list item and a dataframe containing floor-level data as the second list item.</p>
+<div class="cell">
+<div id="tbl-tidybuilding-2" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tidybuilding-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Minimal Structure
+</figcaption>
+<div aria-describedby="tbl-tidybuilding-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: right;">floor</th>
+<th style="text-align: right;">floor_height</th>
+<th style="text-align: right;">floor_area</th>
+<th style="text-align: left;">footprint</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: left;">footprint geometry</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: left;">footprint geometry</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1500</td>
+<td style="text-align: left;">footprint geometry</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-tidybuilding-3" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tidybuilding-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Adding a Floor and Classifying the Roof
+</figcaption>
+<div aria-describedby="tbl-tidybuilding-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 11%">
+<col style="width: 9%">
+<col style="width: 13%">
+<col style="width: 11%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">floor</th>
+<th style="text-align: left;">floor_type</th>
+<th style="text-align: right;">floor_height</th>
+<th style="text-align: right;">floor_area</th>
+<th style="text-align: right;">bedrooms</th>
+<th style="text-align: right;">unit_amount</th>
+<th style="text-align: right;">roof_slope</th>
+<th style="text-align: left;">footprint</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">residence</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: left;">footprint geometry</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">residence</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: left;">footprint geometry</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">residence</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1500</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: left;">footprint geometry</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">roof</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: left;">footprint geometry</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>Or maybe we do something like this?</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 5%">
+<col style="width: 12%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 19%">
+<col style="width: 18%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">floor</th>
+<th style="text-align: right;">floor_height</th>
+<th style="text-align: right;">units_0bed</th>
+<th style="text-align: right;">units_1bed</th>
+<th style="text-align: right;">units_2bed</th>
+<th style="text-align: right;">units_3bed</th>
+<th style="text-align: left;">floor_plan</th>
+<th style="text-align: left;">footprint</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">floor plan geometry</td>
+<td style="text-align: left;">footprint geometry</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">floor plan geometry</td>
+<td style="text-align: left;">footprint geometry</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">floor plan geometry</td>
+<td style="text-align: left;">footprint geometry</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="fourplex-example" class="level4">
+<h4 class="anchored" data-anchor-id="fourplex-example">Fourplex Example</h4>
+<p>If we had a building like the fourplex pictured below, the tidybuilding object might look something like the following.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="figures/fourplex_plans.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="https://libertyhouseplans.com/products/haywood-fourplex"><img src="figures/fourplex_plans.jpeg" class="img-fluid figure-img" style="width:50.0%" alt="https://libertyhouseplans.com/products/haywood-fourplex"></a></p>
+<figcaption>https://libertyhouseplans.com/products/haywood-fourplex</figcaption>
+</figure>
+</div>
+<p><strong>Visual of the fourplex geometries</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="tidybuilding_old_version_files/figure-html/unnamed-chunk-8-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="tidybuilding_old_version_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>tidybuilding Idea 1</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 11%">
+<col style="width: 14%">
+<col style="width: 19%">
+<col style="width: 12%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">floor</th>
+<th style="text-align: center;">geom_type</th>
+<th style="text-align: center;">floor_height</th>
+<th style="text-align: center;">floor_roof_pitch</th>
+<th style="text-align: center;">units_2bed</th>
+<th style="text-align: center;">geometry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">footprint</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.0000</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">POLYGON ((-105.9832 3.44233…</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">footprint</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.3333</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">POLYGON ((-105.9832 3.44233…</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">fl_area</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.0000</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">POLYGON ((-105.9832 3.44233…</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">fl_area</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.3333</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">POLYGON ((-105.9832 3.44233…</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p><br></p>
+<p><strong>tidybuilding Idea 2</strong></p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 14%">
+<col style="width: 18%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">floor</th>
+<th style="text-align: center;">floor_height</th>
+<th style="text-align: center;">floor_roof_pitch</th>
+<th style="text-align: center;">units_2bed</th>
+<th style="text-align: center;">floor_area</th>
+<th style="text-align: center;">geometry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.0000</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2350.769</td>
+<td style="text-align: center;">POLYGON ((-105.9832 3.44233…</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.3333</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2350.769</td>
+<td style="text-align: center;">POLYGON ((-105.9832 3.44233…</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </section>
 </section>
 <section id="getting-prototype-buildings" class="level1">
@@ -255,30 +552,30 @@ ul.task-list li input[type="checkbox"] {
 <section id="wordsworth-st" class="level2">
 <h2 class="anchored" data-anchor-id="wordsworth-st">84 Wordsworth St</h2>
 <p>The existing building below was chosen as a good example of a 2-family building that we could use as we decide how to create the tidybuilding object.</p>
-<p><a href="figures/wordsworth.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="figures/wordsworth.jpeg" class="img-fluid" style="width:50.0%"></a></p>
-<section id="tidybuilding-representation" class="level3">
-<h3 class="anchored" data-anchor-id="tidybuilding-representation">Tidybuilding Representation</h3>
+<p><a href="figures/wordsworth.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="figures/wordsworth.png" class="img-fluid" style="width:50.0%"></a></p>
+<section id="simple-representation" class="level3">
+<h3 class="anchored" data-anchor-id="simple-representation">Simple Representation</h3>
 <p>The simplest way to represent this building would be with a footprint and height along with all the other information that might be needed to check if it meets zonoing requirements (min unit size, floor area, etc.).</p>
 <p>Building Info</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fsanudmygj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fsanudmygj table {
+<div id="ndymveugub" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ndymveugub table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fsanudmygj thead, #fsanudmygj tbody, #fsanudmygj tfoot, #fsanudmygj tr, #fsanudmygj td, #fsanudmygj th {
+#ndymveugub thead, #ndymveugub tbody, #ndymveugub tfoot, #ndymveugub tr, #ndymveugub td, #ndymveugub th {
   border-style: none;
 }
 
-#fsanudmygj p {
+#ndymveugub p {
   margin: 0;
   padding: 0;
 }
 
-#fsanudmygj .gt_table {
+#ndymveugub .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -304,12 +601,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#fsanudmygj .gt_caption {
+#ndymveugub .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fsanudmygj .gt_title {
+#ndymveugub .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -321,7 +618,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#fsanudmygj .gt_subtitle {
+#ndymveugub .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -333,7 +630,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#fsanudmygj .gt_heading {
+#ndymveugub .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -345,13 +642,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#fsanudmygj .gt_bottom_border {
+#ndymveugub .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fsanudmygj .gt_col_headings {
+#ndymveugub .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -366,7 +663,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#fsanudmygj .gt_col_heading {
+#ndymveugub .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -386,7 +683,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#fsanudmygj .gt_column_spanner_outer {
+#ndymveugub .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -398,15 +695,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#fsanudmygj .gt_column_spanner_outer:first-child {
+#ndymveugub .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fsanudmygj .gt_column_spanner_outer:last-child {
+#ndymveugub .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fsanudmygj .gt_column_spanner {
+#ndymveugub .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -418,11 +715,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#fsanudmygj .gt_spanner_row {
+#ndymveugub .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fsanudmygj .gt_group_heading {
+#ndymveugub .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -448,7 +745,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#fsanudmygj .gt_empty_group_heading {
+#ndymveugub .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -463,15 +760,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#fsanudmygj .gt_from_md > :first-child {
+#ndymveugub .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fsanudmygj .gt_from_md > :last-child {
+#ndymveugub .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fsanudmygj .gt_row {
+#ndymveugub .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -490,7 +787,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#fsanudmygj .gt_stub {
+#ndymveugub .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -503,7 +800,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#fsanudmygj .gt_stub_row_group {
+#ndymveugub .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -517,15 +814,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#fsanudmygj .gt_row_group_first td {
+#ndymveugub .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fsanudmygj .gt_row_group_first th {
+#ndymveugub .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fsanudmygj .gt_summary_row {
+#ndymveugub .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -535,16 +832,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#fsanudmygj .gt_first_summary_row {
+#ndymveugub .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fsanudmygj .gt_first_summary_row.thick {
+#ndymveugub .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fsanudmygj .gt_last_summary_row {
+#ndymveugub .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -554,7 +851,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#fsanudmygj .gt_grand_summary_row {
+#ndymveugub .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -564,7 +861,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#fsanudmygj .gt_first_grand_summary_row {
+#ndymveugub .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -574,7 +871,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#fsanudmygj .gt_last_grand_summary_row_top {
+#ndymveugub .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -584,11 +881,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#fsanudmygj .gt_striped {
+#ndymveugub .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fsanudmygj .gt_table_body {
+#ndymveugub .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -597,7 +894,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#fsanudmygj .gt_footnotes {
+#ndymveugub .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -611,7 +908,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#fsanudmygj .gt_footnote {
+#ndymveugub .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -620,7 +917,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#fsanudmygj .gt_sourcenotes {
+#ndymveugub .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -634,7 +931,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#fsanudmygj .gt_sourcenote {
+#ndymveugub .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -642,72 +939,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#fsanudmygj .gt_left {
+#ndymveugub .gt_left {
   text-align: left;
 }
 
-#fsanudmygj .gt_center {
+#ndymveugub .gt_center {
   text-align: center;
 }
 
-#fsanudmygj .gt_right {
+#ndymveugub .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fsanudmygj .gt_font_normal {
+#ndymveugub .gt_font_normal {
   font-weight: normal;
 }
 
-#fsanudmygj .gt_font_bold {
+#ndymveugub .gt_font_bold {
   font-weight: bold;
 }
 
-#fsanudmygj .gt_font_italic {
+#ndymveugub .gt_font_italic {
   font-style: italic;
 }
 
-#fsanudmygj .gt_super {
+#ndymveugub .gt_super {
   font-size: 65%;
 }
 
-#fsanudmygj .gt_footnote_marks {
+#ndymveugub .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fsanudmygj .gt_asterisk {
+#ndymveugub .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fsanudmygj .gt_indent_1 {
+#ndymveugub .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fsanudmygj .gt_indent_2 {
+#ndymveugub .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fsanudmygj .gt_indent_3 {
+#ndymveugub .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fsanudmygj .gt_indent_4 {
+#ndymveugub .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fsanudmygj .gt_indent_5 {
+#ndymveugub .gt_indent_5 {
   text-indent: 25px;
 }
 
-#fsanudmygj .katex-display {
+#ndymveugub .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#fsanudmygj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ndymveugub div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -744,22 +1041,6 @@ ul.task-list li input[type="checkbox"] {
 <td class="gt_row gt_left" headers="name">building_height</td>
 <td class="gt_row gt_right" headers="value">45</td>
 </tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="name">parking_open</td>
-<td class="gt_row gt_right" headers="value">4</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="name">parking_enclosed</td>
-<td class="gt_row gt_right" headers="value">0</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="name">fl_bel_grade</td>
-<td class="gt_row gt_right" headers="value">0</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="name">parking_bel_grade</td>
-<td class="gt_row gt_right" headers="value">0</td>
-</tr>
 </tbody>
 </table>
 
@@ -771,38 +1052,35 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="tidybuilding_files/figure-html/unnamed-chunk-4-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="tidybuilding_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="tidybuilding_old_version_files/figure-html/unnamed-chunk-15-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="tidybuilding_old_version_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-</section>
-<section id="harvard-st" class="level2">
-<h2 class="anchored" data-anchor-id="harvard-st">416 Harvard St</h2>
-<p><a href="figures/harvard.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="figures/harvard.jpeg" class="img-fluid" style="width:50.0%"></a></p>
-<section id="tidybuilding-representation-1" class="level3">
-<h3 class="anchored" data-anchor-id="tidybuilding-representation-1">Tidybuilding Representation</h3>
-<p>Building Info</p>
+<section id="more-complex-representation" class="level3">
+<h3 class="anchored" data-anchor-id="more-complex-representation">More Complex Representation</h3>
+<p>A more complex way to represent this building would be to show the geometry of all the units and the footprint of each floor. This would create a better sense of the roof slop and the section views of the building.</p>
+<p>Footprints Info</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="gqdmxlmlrr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gqdmxlmlrr table {
+<div id="sssxusxtsc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#sssxusxtsc table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gqdmxlmlrr thead, #gqdmxlmlrr tbody, #gqdmxlmlrr tfoot, #gqdmxlmlrr tr, #gqdmxlmlrr td, #gqdmxlmlrr th {
+#sssxusxtsc thead, #sssxusxtsc tbody, #sssxusxtsc tfoot, #sssxusxtsc tr, #sssxusxtsc td, #sssxusxtsc th {
   border-style: none;
 }
 
-#gqdmxlmlrr p {
+#sssxusxtsc p {
   margin: 0;
   padding: 0;
 }
 
-#gqdmxlmlrr .gt_table {
+#sssxusxtsc .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -828,12 +1106,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#gqdmxlmlrr .gt_caption {
+#sssxusxtsc .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gqdmxlmlrr .gt_title {
+#sssxusxtsc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -845,7 +1123,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#gqdmxlmlrr .gt_subtitle {
+#sssxusxtsc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -857,7 +1135,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#gqdmxlmlrr .gt_heading {
+#sssxusxtsc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -869,13 +1147,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#gqdmxlmlrr .gt_bottom_border {
+#sssxusxtsc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gqdmxlmlrr .gt_col_headings {
+#sssxusxtsc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -890,7 +1168,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#gqdmxlmlrr .gt_col_heading {
+#sssxusxtsc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -910,7 +1188,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#gqdmxlmlrr .gt_column_spanner_outer {
+#sssxusxtsc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -922,15 +1200,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#gqdmxlmlrr .gt_column_spanner_outer:first-child {
+#sssxusxtsc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gqdmxlmlrr .gt_column_spanner_outer:last-child {
+#sssxusxtsc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gqdmxlmlrr .gt_column_spanner {
+#sssxusxtsc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -942,11 +1220,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#gqdmxlmlrr .gt_spanner_row {
+#sssxusxtsc .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gqdmxlmlrr .gt_group_heading {
+#sssxusxtsc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -972,7 +1250,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#gqdmxlmlrr .gt_empty_group_heading {
+#sssxusxtsc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -987,15 +1265,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#gqdmxlmlrr .gt_from_md > :first-child {
+#sssxusxtsc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gqdmxlmlrr .gt_from_md > :last-child {
+#sssxusxtsc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gqdmxlmlrr .gt_row {
+#sssxusxtsc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1014,7 +1292,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#gqdmxlmlrr .gt_stub {
+#sssxusxtsc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1027,7 +1305,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#gqdmxlmlrr .gt_stub_row_group {
+#sssxusxtsc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1041,15 +1319,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#gqdmxlmlrr .gt_row_group_first td {
+#sssxusxtsc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gqdmxlmlrr .gt_row_group_first th {
+#sssxusxtsc .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gqdmxlmlrr .gt_summary_row {
+#sssxusxtsc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1059,16 +1337,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#gqdmxlmlrr .gt_first_summary_row {
+#sssxusxtsc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gqdmxlmlrr .gt_first_summary_row.thick {
+#sssxusxtsc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gqdmxlmlrr .gt_last_summary_row {
+#sssxusxtsc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1078,7 +1356,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#gqdmxlmlrr .gt_grand_summary_row {
+#sssxusxtsc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1088,7 +1366,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#gqdmxlmlrr .gt_first_grand_summary_row {
+#sssxusxtsc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1098,7 +1376,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#gqdmxlmlrr .gt_last_grand_summary_row_top {
+#sssxusxtsc .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1108,11 +1386,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#gqdmxlmlrr .gt_striped {
+#sssxusxtsc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gqdmxlmlrr .gt_table_body {
+#sssxusxtsc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1121,7 +1399,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#gqdmxlmlrr .gt_footnotes {
+#sssxusxtsc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1135,7 +1413,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#gqdmxlmlrr .gt_footnote {
+#sssxusxtsc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1144,7 +1422,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#gqdmxlmlrr .gt_sourcenotes {
+#sssxusxtsc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1158,7 +1436,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#gqdmxlmlrr .gt_sourcenote {
+#sssxusxtsc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1166,72 +1444,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#gqdmxlmlrr .gt_left {
+#sssxusxtsc .gt_left {
   text-align: left;
 }
 
-#gqdmxlmlrr .gt_center {
+#sssxusxtsc .gt_center {
   text-align: center;
 }
 
-#gqdmxlmlrr .gt_right {
+#sssxusxtsc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gqdmxlmlrr .gt_font_normal {
+#sssxusxtsc .gt_font_normal {
   font-weight: normal;
 }
 
-#gqdmxlmlrr .gt_font_bold {
+#sssxusxtsc .gt_font_bold {
   font-weight: bold;
 }
 
-#gqdmxlmlrr .gt_font_italic {
+#sssxusxtsc .gt_font_italic {
   font-style: italic;
 }
 
-#gqdmxlmlrr .gt_super {
+#sssxusxtsc .gt_super {
   font-size: 65%;
 }
 
-#gqdmxlmlrr .gt_footnote_marks {
+#sssxusxtsc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gqdmxlmlrr .gt_asterisk {
+#sssxusxtsc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gqdmxlmlrr .gt_indent_1 {
+#sssxusxtsc .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gqdmxlmlrr .gt_indent_2 {
+#sssxusxtsc .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gqdmxlmlrr .gt_indent_3 {
+#sssxusxtsc .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gqdmxlmlrr .gt_indent_4 {
+#sssxusxtsc .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gqdmxlmlrr .gt_indent_5 {
+#sssxusxtsc .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gqdmxlmlrr .katex-display {
+#sssxusxtsc .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gqdmxlmlrr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#sssxusxtsc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1239,50 +1517,26 @@ ul.task-list li input[type="checkbox"] {
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_col_headings">
-<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
-<th id="value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">value</th>
+<th id="floor" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">floor</th>
+<th id="height" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">height</th>
+<th id="geometry" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">geometry</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="name">units_2bed</td>
-<td class="gt_row gt_right" headers="value">4</td>
+<td class="gt_row gt_right" headers="floor">1</td>
+<td class="gt_row gt_right" headers="height">15</td>
+<td class="gt_row gt_left" headers="geometry">geometry</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="name">total_floors</td>
-<td class="gt_row gt_right" headers="value">3</td>
+<td class="gt_row gt_right" headers="floor">2</td>
+<td class="gt_row gt_right" headers="height">15</td>
+<td class="gt_row gt_left" headers="geometry">geometry</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="name">max_unit_size</td>
-<td class="gt_row gt_right" headers="value">1178</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="name">min_unit_size</td>
-<td class="gt_row gt_right" headers="value">1177</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="name">floor_area</td>
-<td class="gt_row gt_right" headers="value">4710</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="name">building_height</td>
-<td class="gt_row gt_right" headers="value">40</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="name">parking_open</td>
-<td class="gt_row gt_right" headers="value">3</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="name">parking_enclosed</td>
-<td class="gt_row gt_right" headers="value">0</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="name">fl_bel_grade</td>
-<td class="gt_row gt_right" headers="value">1</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="name">parking_bel_grade</td>
-<td class="gt_row gt_right" headers="value">0</td>
+<td class="gt_row gt_right" headers="floor">3</td>
+<td class="gt_row gt_right" headers="height">15</td>
+<td class="gt_row gt_left" headers="geometry">geometry</td>
 </tr>
 </tbody>
 </table>
@@ -1290,43 +1544,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Footprint Geometry</p>
+<p>Unit Info</p>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="tidybuilding_files/figure-html/unnamed-chunk-7-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="tidybuilding_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="valentine-st" class="level2">
-<h2 class="anchored" data-anchor-id="valentine-st">8 Valentine St</h2>
-<p><a href="figures/valentine.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="figures/valentine.jpeg" class="img-fluid" style="width:50.0%"></a></p>
-<section id="tidybuilding-representation-2" class="level3">
-<h3 class="anchored" data-anchor-id="tidybuilding-representation-2">Tidybuilding Representation</h3>
-<p>Building Info</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="flqyvgkpvu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#flqyvgkpvu table {
+<div id="tfjaaenlke" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#tfjaaenlke table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#flqyvgkpvu thead, #flqyvgkpvu tbody, #flqyvgkpvu tfoot, #flqyvgkpvu tr, #flqyvgkpvu td, #flqyvgkpvu th {
+#tfjaaenlke thead, #tfjaaenlke tbody, #tfjaaenlke tfoot, #tfjaaenlke tr, #tfjaaenlke td, #tfjaaenlke th {
   border-style: none;
 }
 
-#flqyvgkpvu p {
+#tfjaaenlke p {
   margin: 0;
   padding: 0;
 }
 
-#flqyvgkpvu .gt_table {
+#tfjaaenlke .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1352,12 +1589,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#flqyvgkpvu .gt_caption {
+#tfjaaenlke .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#flqyvgkpvu .gt_title {
+#tfjaaenlke .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1369,7 +1606,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#flqyvgkpvu .gt_subtitle {
+#tfjaaenlke .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1381,7 +1618,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#flqyvgkpvu .gt_heading {
+#tfjaaenlke .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1393,13 +1630,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#flqyvgkpvu .gt_bottom_border {
+#tfjaaenlke .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#flqyvgkpvu .gt_col_headings {
+#tfjaaenlke .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1414,7 +1651,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#flqyvgkpvu .gt_col_heading {
+#tfjaaenlke .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1434,7 +1671,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#flqyvgkpvu .gt_column_spanner_outer {
+#tfjaaenlke .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1446,15 +1683,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#flqyvgkpvu .gt_column_spanner_outer:first-child {
+#tfjaaenlke .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#flqyvgkpvu .gt_column_spanner_outer:last-child {
+#tfjaaenlke .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#flqyvgkpvu .gt_column_spanner {
+#tfjaaenlke .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1466,11 +1703,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#flqyvgkpvu .gt_spanner_row {
+#tfjaaenlke .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#flqyvgkpvu .gt_group_heading {
+#tfjaaenlke .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1496,7 +1733,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#flqyvgkpvu .gt_empty_group_heading {
+#tfjaaenlke .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1511,15 +1748,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#flqyvgkpvu .gt_from_md > :first-child {
+#tfjaaenlke .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#flqyvgkpvu .gt_from_md > :last-child {
+#tfjaaenlke .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#flqyvgkpvu .gt_row {
+#tfjaaenlke .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1538,7 +1775,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#flqyvgkpvu .gt_stub {
+#tfjaaenlke .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1551,7 +1788,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#flqyvgkpvu .gt_stub_row_group {
+#tfjaaenlke .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1565,15 +1802,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#flqyvgkpvu .gt_row_group_first td {
+#tfjaaenlke .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#flqyvgkpvu .gt_row_group_first th {
+#tfjaaenlke .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#flqyvgkpvu .gt_summary_row {
+#tfjaaenlke .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1583,16 +1820,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#flqyvgkpvu .gt_first_summary_row {
+#tfjaaenlke .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#flqyvgkpvu .gt_first_summary_row.thick {
+#tfjaaenlke .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#flqyvgkpvu .gt_last_summary_row {
+#tfjaaenlke .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1602,7 +1839,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#flqyvgkpvu .gt_grand_summary_row {
+#tfjaaenlke .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1612,7 +1849,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#flqyvgkpvu .gt_first_grand_summary_row {
+#tfjaaenlke .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1622,7 +1859,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#flqyvgkpvu .gt_last_grand_summary_row_top {
+#tfjaaenlke .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1632,11 +1869,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#flqyvgkpvu .gt_striped {
+#tfjaaenlke .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#flqyvgkpvu .gt_table_body {
+#tfjaaenlke .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1645,7 +1882,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#flqyvgkpvu .gt_footnotes {
+#tfjaaenlke .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1659,7 +1896,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#flqyvgkpvu .gt_footnote {
+#tfjaaenlke .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1668,7 +1905,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#flqyvgkpvu .gt_sourcenotes {
+#tfjaaenlke .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1682,7 +1919,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#flqyvgkpvu .gt_sourcenote {
+#tfjaaenlke .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1690,72 +1927,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#flqyvgkpvu .gt_left {
+#tfjaaenlke .gt_left {
   text-align: left;
 }
 
-#flqyvgkpvu .gt_center {
+#tfjaaenlke .gt_center {
   text-align: center;
 }
 
-#flqyvgkpvu .gt_right {
+#tfjaaenlke .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#flqyvgkpvu .gt_font_normal {
+#tfjaaenlke .gt_font_normal {
   font-weight: normal;
 }
 
-#flqyvgkpvu .gt_font_bold {
+#tfjaaenlke .gt_font_bold {
   font-weight: bold;
 }
 
-#flqyvgkpvu .gt_font_italic {
+#tfjaaenlke .gt_font_italic {
   font-style: italic;
 }
 
-#flqyvgkpvu .gt_super {
+#tfjaaenlke .gt_super {
   font-size: 65%;
 }
 
-#flqyvgkpvu .gt_footnote_marks {
+#tfjaaenlke .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#flqyvgkpvu .gt_asterisk {
+#tfjaaenlke .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#flqyvgkpvu .gt_indent_1 {
+#tfjaaenlke .gt_indent_1 {
   text-indent: 5px;
 }
 
-#flqyvgkpvu .gt_indent_2 {
+#tfjaaenlke .gt_indent_2 {
   text-indent: 10px;
 }
 
-#flqyvgkpvu .gt_indent_3 {
+#tfjaaenlke .gt_indent_3 {
   text-indent: 15px;
 }
 
-#flqyvgkpvu .gt_indent_4 {
+#tfjaaenlke .gt_indent_4 {
   text-indent: 20px;
 }
 
-#flqyvgkpvu .gt_indent_5 {
+#tfjaaenlke .gt_indent_5 {
   text-indent: 25px;
 }
 
-#flqyvgkpvu .katex-display {
+#tfjaaenlke .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#flqyvgkpvu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#tfjaaenlke div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1763,54 +2000,18 @@ ul.task-list li input[type="checkbox"] {
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_col_headings">
-<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
-<th id="value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">value</th>
+<th id="unit" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">unit</th>
+<th id="bedrooms" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">bedrooms</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="name">units_3bed</td>
-<td class="gt_row gt_right" headers="value">4</td>
+<td class="gt_row gt_right" headers="unit">1</td>
+<td class="gt_row gt_right" headers="bedrooms">3</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="name">total_floors</td>
-<td class="gt_row gt_right" headers="value">3</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="name">max_unit_size</td>
-<td class="gt_row gt_right" headers="value">1109</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="name">min_unit_size</td>
-<td class="gt_row gt_right" headers="value">1108</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="name">floor_area</td>
-<td class="gt_row gt_right" headers="value">4434</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="name">building_height</td>
-<td class="gt_row gt_right" headers="value">38</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="name">parking_open</td>
-<td class="gt_row gt_right" headers="value">2</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="name">parking_enclosed</td>
-<td class="gt_row gt_right" headers="value">4</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="name">fl_bel_grade</td>
-<td class="gt_row gt_right" headers="value">1</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="name">parking_floors</td>
-<td class="gt_row gt_right" headers="value">1</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="name">parking_bel_grade</td>
-<td class="gt_row gt_right" headers="value">1</td>
+<td class="gt_row gt_right" headers="unit">2</td>
+<td class="gt_row gt_right" headers="bedrooms">3</td>
 </tr>
 </tbody>
 </table>
@@ -1818,43 +2019,26 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Footprint Geometry</p>
+<p>Unit Geometries</p>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="tidybuilding_files/figure-html/unnamed-chunk-10-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="tidybuilding_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="condor-st" class="level2">
-<h2 class="anchored" data-anchor-id="condor-st">211 Condor St</h2>
-<p><a href="figures/condor.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="figures/condor.jpeg" class="img-fluid" style="width:50.0%"></a></p>
-<section id="tidybuilding-representation-3" class="level3">
-<h3 class="anchored" data-anchor-id="tidybuilding-representation-3">Tidybuilding Representation</h3>
-<p>Building Info</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="avucgrhxsp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#avucgrhxsp table {
+<div id="dgicozbyhf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dgicozbyhf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#avucgrhxsp thead, #avucgrhxsp tbody, #avucgrhxsp tfoot, #avucgrhxsp tr, #avucgrhxsp td, #avucgrhxsp th {
+#dgicozbyhf thead, #dgicozbyhf tbody, #dgicozbyhf tfoot, #dgicozbyhf tr, #dgicozbyhf td, #dgicozbyhf th {
   border-style: none;
 }
 
-#avucgrhxsp p {
+#dgicozbyhf p {
   margin: 0;
   padding: 0;
 }
 
-#avucgrhxsp .gt_table {
+#dgicozbyhf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1880,12 +2064,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#avucgrhxsp .gt_caption {
+#dgicozbyhf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#avucgrhxsp .gt_title {
+#dgicozbyhf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1897,7 +2081,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#avucgrhxsp .gt_subtitle {
+#dgicozbyhf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1909,7 +2093,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#avucgrhxsp .gt_heading {
+#dgicozbyhf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1921,13 +2105,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#avucgrhxsp .gt_bottom_border {
+#dgicozbyhf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#avucgrhxsp .gt_col_headings {
+#dgicozbyhf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1942,7 +2126,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#avucgrhxsp .gt_col_heading {
+#dgicozbyhf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1962,7 +2146,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#avucgrhxsp .gt_column_spanner_outer {
+#dgicozbyhf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1974,15 +2158,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#avucgrhxsp .gt_column_spanner_outer:first-child {
+#dgicozbyhf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#avucgrhxsp .gt_column_spanner_outer:last-child {
+#dgicozbyhf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#avucgrhxsp .gt_column_spanner {
+#dgicozbyhf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1994,11 +2178,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#avucgrhxsp .gt_spanner_row {
+#dgicozbyhf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#avucgrhxsp .gt_group_heading {
+#dgicozbyhf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2024,7 +2208,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#avucgrhxsp .gt_empty_group_heading {
+#dgicozbyhf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2039,15 +2223,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#avucgrhxsp .gt_from_md > :first-child {
+#dgicozbyhf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#avucgrhxsp .gt_from_md > :last-child {
+#dgicozbyhf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#avucgrhxsp .gt_row {
+#dgicozbyhf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2066,7 +2250,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#avucgrhxsp .gt_stub {
+#dgicozbyhf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2079,7 +2263,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#avucgrhxsp .gt_stub_row_group {
+#dgicozbyhf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2093,15 +2277,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#avucgrhxsp .gt_row_group_first td {
+#dgicozbyhf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#avucgrhxsp .gt_row_group_first th {
+#dgicozbyhf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#avucgrhxsp .gt_summary_row {
+#dgicozbyhf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2111,16 +2295,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#avucgrhxsp .gt_first_summary_row {
+#dgicozbyhf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#avucgrhxsp .gt_first_summary_row.thick {
+#dgicozbyhf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#avucgrhxsp .gt_last_summary_row {
+#dgicozbyhf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2130,7 +2314,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#avucgrhxsp .gt_grand_summary_row {
+#dgicozbyhf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2140,7 +2324,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#avucgrhxsp .gt_first_grand_summary_row {
+#dgicozbyhf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2150,7 +2334,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#avucgrhxsp .gt_last_grand_summary_row_top {
+#dgicozbyhf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2160,11 +2344,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#avucgrhxsp .gt_striped {
+#dgicozbyhf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#avucgrhxsp .gt_table_body {
+#dgicozbyhf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2173,7 +2357,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#avucgrhxsp .gt_footnotes {
+#dgicozbyhf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2187,7 +2371,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#avucgrhxsp .gt_footnote {
+#dgicozbyhf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2196,7 +2380,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#avucgrhxsp .gt_sourcenotes {
+#dgicozbyhf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2210,7 +2394,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#avucgrhxsp .gt_sourcenote {
+#dgicozbyhf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2218,72 +2402,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#avucgrhxsp .gt_left {
+#dgicozbyhf .gt_left {
   text-align: left;
 }
 
-#avucgrhxsp .gt_center {
+#dgicozbyhf .gt_center {
   text-align: center;
 }
 
-#avucgrhxsp .gt_right {
+#dgicozbyhf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#avucgrhxsp .gt_font_normal {
+#dgicozbyhf .gt_font_normal {
   font-weight: normal;
 }
 
-#avucgrhxsp .gt_font_bold {
+#dgicozbyhf .gt_font_bold {
   font-weight: bold;
 }
 
-#avucgrhxsp .gt_font_italic {
+#dgicozbyhf .gt_font_italic {
   font-style: italic;
 }
 
-#avucgrhxsp .gt_super {
+#dgicozbyhf .gt_super {
   font-size: 65%;
 }
 
-#avucgrhxsp .gt_footnote_marks {
+#dgicozbyhf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#avucgrhxsp .gt_asterisk {
+#dgicozbyhf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#avucgrhxsp .gt_indent_1 {
+#dgicozbyhf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#avucgrhxsp .gt_indent_2 {
+#dgicozbyhf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#avucgrhxsp .gt_indent_3 {
+#dgicozbyhf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#avucgrhxsp .gt_indent_4 {
+#dgicozbyhf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#avucgrhxsp .gt_indent_5 {
+#dgicozbyhf .gt_indent_5 {
   text-indent: 25px;
 }
 
-#avucgrhxsp .katex-display {
+#dgicozbyhf .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#avucgrhxsp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#dgicozbyhf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2291,58 +2475,41 @@ ul.task-list li input[type="checkbox"] {
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_col_headings">
-<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
-<th id="value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">value</th>
+<th id="floor" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">floor</th>
+<th id="unit" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">unit</th>
+<th id="geometry" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">geometry</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="name">units_1bed</td>
-<td class="gt_row gt_right" headers="value">1</td>
+<td class="gt_row gt_right" headers="floor">1</td>
+<td class="gt_row gt_right" headers="unit">1</td>
+<td class="gt_row gt_left" headers="geometry">geometry</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="name">units_2bed</td>
-<td class="gt_row gt_right" headers="value">11</td>
+<td class="gt_row gt_right" headers="floor">2</td>
+<td class="gt_row gt_right" headers="unit">1</td>
+<td class="gt_row gt_left" headers="geometry">geometry</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="name">total_floors</td>
-<td class="gt_row gt_right" headers="value">4</td>
+<td class="gt_row gt_right" headers="floor">3</td>
+<td class="gt_row gt_right" headers="unit">1</td>
+<td class="gt_row gt_left" headers="geometry">geometry</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="name">max_unit_size</td>
-<td class="gt_row gt_right" headers="value">1244</td>
+<td class="gt_row gt_right" headers="floor">1</td>
+<td class="gt_row gt_right" headers="unit">2</td>
+<td class="gt_row gt_left" headers="geometry">geometry</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="name">min_unit_size</td>
-<td class="gt_row gt_right" headers="value">716</td>
+<td class="gt_row gt_right" headers="floor">2</td>
+<td class="gt_row gt_right" headers="unit">2</td>
+<td class="gt_row gt_left" headers="geometry">geometry</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="name">floor_area</td>
-<td class="gt_row gt_right" headers="value">12147</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="name">building_height</td>
-<td class="gt_row gt_right" headers="value">60</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="name">parking_open</td>
-<td class="gt_row gt_right" headers="value">0</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="name">parking_enclosed</td>
-<td class="gt_row gt_right" headers="value">8</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="name">fl_bel_grade</td>
-<td class="gt_row gt_right" headers="value">0</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="name">parking_floors</td>
-<td class="gt_row gt_right" headers="value">1</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="name">parking_bel_grade</td>
-<td class="gt_row gt_right" headers="value">0</td>
+<td class="gt_row gt_right" headers="floor">3</td>
+<td class="gt_row gt_right" headers="unit">2</td>
+<td class="gt_row gt_left" headers="geometry">geometry</td>
 </tr>
 </tbody>
 </table>
@@ -2350,12 +2517,24 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>Footprint Geometry</p>
+<p><br> <br> Visual of the geometry</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="tidybuilding_files/figure-html/unnamed-chunk-13-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="tidybuilding_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></a></p>
+<p><a href="tidybuilding_old_version_files/figure-html/unnamed-chunk-20-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="tidybuilding_old_version_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="information-with-just-footprint-and-section-views" class="level3">
+<h3 class="anchored" data-anchor-id="information-with-just-footprint-and-section-views">Information with just footprint and section views</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="tidybuilding_old_version_files/figure-html/unnamed-chunk-21-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="tidybuilding_old_version_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -2788,7 +2967,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":false});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

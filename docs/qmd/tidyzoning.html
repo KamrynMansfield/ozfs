@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>find_bldg_type() – Zoning Accessibility Analysis Project</title>
+<title>The tidyzoning Package – Zoning Accessibility Analysis Project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,25 +57,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Zoning Accessibility Analysis Project</span>
     </a>
   </div>
@@ -125,7 +125,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../qmd/index.html"> 
+    <a class="nav-link" href="../qmd/index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -134,23 +134,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-ozfs">    
         <li>
-    <a class="dropdown-item" href="../../qmd/ozfs.html">
+    <a class="dropdown-item" href="../qmd/ozfs.html">
  <span class="dropdown-text">OZFS - Documentation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/naming.html">
+    <a class="dropdown-item" href="../qmd/naming.html">
  <span class="dropdown-text">OZFS - Naming Convention</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/slides.html">
+    <a class="dropdown-item" href="../qmd/slides.html">
  <span class="dropdown-text">Slideshow Visualization</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/atlas_to_ozfs_howto.html">
+    <a class="dropdown-item" href="../qmd/atlas_to_ozfs_howto.html">
  <span class="dropdown-text">Converting NZA Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/atlas_to_ozfs_howto.html">
+    <a class="dropdown-item" href="../qmd/atlas_to_ozfs_howto.html">
  <span class="dropdown-text">NZA Manual Adjustment</span></a>
   </li>  
     </ul>
@@ -161,31 +161,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-tidyzoning">    
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning.html">
  <span class="dropdown-text">tidyzoning</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidybuilding.html">
+    <a class="dropdown-item" href="../qmd/tidybuilding.html">
  <span class="dropdown-text">tidybuilding</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/find_district.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/find_district.html">
  <span class="dropdown-text">find_district_idx()</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/find_bldg_type.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/find_bldg_type.html">
  <span class="dropdown-text">find_bldg_type()</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/check_land_use.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/check_land_use.html">
  <span class="dropdown-text">check_land_use()</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/check_fl_area.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/check_fl_area.html">
  <span class="dropdown-text">check_fl_area()</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/check_footprint.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/check_footprint.html">
  <span class="dropdown-text">check_footprint()</span></a>
   </li>  
     </ul>
@@ -206,13 +206,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#input" id="toc-input" class="nav-link active" data-scroll-target="#input">Input</a>
+  <li><a href="#instalation" id="toc-instalation" class="nav-link active" data-scroll-target="#instalation">Instalation</a></li>
+  <li><a href="#information" id="toc-information" class="nav-link" data-scroll-target="#information">Information</a>
   <ul>
-  <li><a href="#tidybuilding" id="toc-tidybuilding" class="nav-link" data-scroll-target="#tidybuilding">tidybuilding</a></li>
+  <li><a href="#data-classes" id="toc-data-classes" class="nav-link" data-scroll-target="#data-classes">Data Classes</a>
+  <ul class="collapse">
+  <li><a href="#tidyzoning" id="toc-tidyzoning" class="nav-link" data-scroll-target="#tidyzoning">tidyzoning</a></li>
+  <li><a href="#tidyparcel" id="toc-tidyparcel" class="nav-link" data-scroll-target="#tidyparcel">tidyparcel</a>
+  <ul class="collapse">
+  <li><a href="#example-of-tidyparcel-object" id="toc-example-of-tidyparcel-object" class="nav-link" data-scroll-target="#example-of-tidyparcel-object">Example of tidyparcel object</a></li>
   </ul></li>
-  <li><a href="#find_bldg_type" id="toc-find_bldg_type" class="nav-link" data-scroll-target="#find_bldg_type">find_bldg_type()</a>
-  <ul>
-  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example 1</a></li>
+  <li><a href="#tidybuilding" id="toc-tidybuilding" class="nav-link" data-scroll-target="#tidybuilding">tidybuilding</a>
+  <ul class="collapse">
+  <li><a href="#example-of-tidybuilding-object" id="toc-example-of-tidybuilding-object" class="nav-link" data-scroll-target="#example-of-tidybuilding-object">Example of tidybuilding object</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#functions" id="toc-functions" class="nav-link" data-scroll-target="#functions">Functions</a>
+  <ul class="collapse">
+  <li><a href="#find_district_idx" id="toc-find_district_idx" class="nav-link" data-scroll-target="#find_district_idx">find_district_idx()</a></li>
+  <li><a href="#find_bldg_type" id="toc-find_bldg_type" class="nav-link" data-scroll-target="#find_bldg_type">find_bldg_type()</a></li>
+  <li><a href="#check_land_use" id="toc-check_land_use" class="nav-link" data-scroll-target="#check_land_use">check_land_use()</a></li>
+  <li><a href="#check_fl_area" id="toc-check_fl_area" class="nav-link" data-scroll-target="#check_fl_area">check_fl_area()</a></li>
+  <li><a href="#check_footprint" id="toc-check_footprint" class="nav-link" data-scroll-target="#check_footprint">check_footprint()</a></li>
+  <li><a href="#check_parking" id="toc-check_parking" class="nav-link" data-scroll-target="#check_parking">check_parking()</a></li>
+  </ul></li>
+  <li><a href="#future-functions" id="toc-future-functions" class="nav-link" data-scroll-target="#future-functions">Future Functions</a>
+  <ul class="collapse">
+  <li><a href="#function-1" id="toc-function-1" class="nav-link" data-scroll-target="#function-1">function 1</a></li>
+  <li><a href="#function-2" id="toc-function-2" class="nav-link" data-scroll-target="#function-2">function 2</a></li>
+  <li><a href="#function-3" id="toc-function-3" class="nav-link" data-scroll-target="#function-3">function 3</a></li>
+  <li><a href="#function-4" id="toc-function-4" class="nav-link" data-scroll-target="#function-4">function 4</a></li>
+  <li><a href="#function-5" id="toc-function-5" class="nav-link" data-scroll-target="#function-5">function 5</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -222,7 +247,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">find_bldg_type()</h1>
+<h1 class="title">The tidyzoning Package</h1>
 </div>
 
 
@@ -239,82 +264,143 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The land_use_check() function takes tidydistrict, and a tidybuilding and returns a boolean stating if the type of building is allowed in the district</p>
-<section id="input" class="level2">
-<h2 class="anchored" data-anchor-id="input">Input</h2>
-<section id="tidybuilding" class="level4">
-<h4 class="anchored" data-anchor-id="tidybuilding">tidybuilding</h4>
-<p>This is the data formatted to represent a building.</p>
+<section id="instalation" class="level2">
+<h2 class="anchored" data-anchor-id="instalation">Instalation</h2>
+<p>Load the <strong>devtools</strong> package</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(devtools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Install package using <strong>install_github()</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install_github</span>(<span class="st">"kamrynmansfield/tidyzoning"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Load the <strong>tidyzoning</strong> package</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyzoning)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="information" class="level1">
+<h1>Information</h1>
+<p>To perform our analysis, we will create an R package called tidyzoning. The list below describes some of main things we hope the package will accomplish.</p>
+<ul>
+<li><strong>Take a building plan and find out where the zoning codes will allow it.</strong></li>
+<li><strong>Take a parcel and find out what kind of building we can build on it. </strong></li>
+</ul>
+<section id="data-classes" class="level2">
+<h2 class="anchored" data-anchor-id="data-classes">Data Classes</h2>
+<p>In order to keep zoning, parcel, and building information uniform, the tidyzoning package has 4 data classes.</p>
+<section id="tidyzoning" class="level3">
+<h3 class="anchored" data-anchor-id="tidyzoning">tidyzoning</h3>
+<p>An object representing zoning requirements and geometry for one or multiple zoning districts. It will be created using data stored in the <a href="../qmd/ozfs.html">Open-Zoning Feed Specification (OZFS)</a> format.</p>
+<details>
+<summary>
+More
+</summary>
+This data class has not been finalized yet, but I am thinking it could be a nested list mimicking the ozfs geojson structure along with a data frame that has the geometry of each district.
+</details>
+</section>
+<section id="tidyparcel" class="level3">
+<h3 class="anchored" data-anchor-id="tidyparcel">tidyparcel</h3>
+<p>An object representing geometry and sides of one or more parcels.</p>
+<details>
+<summary>
+More
+</summary>
+<section id="example-of-tidyparcel-object" class="level4">
+<h4 class="anchored" data-anchor-id="example-of-tidyparcel-object">Example of tidyparcel object</h4>
+<p>The example below is a parcel found in Azle, TX. <a href="#tbl-tidyparcel" class="quarto-xref">Table&nbsp;1</a> shows the simple information that would be contained in the tidyparcel object and <a href="#fig-tidyparcel" class="quarto-xref">Figure&nbsp;1</a> is a visualization of the tidyparcel object. Note that this data could be contained in a dataframe as shown, but it could also be organized into a list. If we find it would be easier to have a list as we are creating the functions, then we can change this, but, for now, the data stored in a tidyparcel object is being displayed as a dataframe.</p>
+<div class="cell">
+<div id="tbl-tidyparcel" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-tidyparcel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Tidyparcel Information
+</figcaption>
+<div aria-describedby="tbl-tidyparcel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 10%">
-<col style="width: 11%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 10%">
-<col style="width: 14%">
-<col style="width: 27%">
-</colgroup>
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th style="text-align: center;">units_3bed</th>
-<th style="text-align: center;">total_floors</th>
-<th style="text-align: center;">max_unit_size</th>
-<th style="text-align: center;">min_unit_size</th>
-<th style="text-align: center;">floor_area</th>
-<th style="text-align: center;">building_height</th>
+<th style="text-align: center;">parcel_id</th>
+<th style="text-align: center;">edge</th>
 <th style="text-align: center;">geometry</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">1563</td>
-<td style="text-align: center;">1563</td>
-<td style="text-align: center;">3126</td>
-<td style="text-align: center;">45</td>
-<td style="text-align: center;">POLYGON ((0 0, 35 0, 35 40,…</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">front</td>
+<td style="text-align: center;">MULTILINESTRING ((-97.51715…</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">side.interior</td>
+<td style="text-align: center;">MULTILINESTRING ((-97.51758…</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">rear</td>
+<td style="text-align: center;">MULTILINESTRING ((-97.51811…</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">side.interior</td>
+<td style="text-align: center;">MULTILINESTRING ((-97.51768…</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
+</figure>
+</div>
+</div>
 <div class="cell">
 <div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="find_bldg_type_files/figure-html/unnamed-chunk-5-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="find_bldg_type_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="1920"></a></p>
+<div id="fig-tidyparcel" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-tidyparcel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="tidyzoning_files/figure-html/fig-tidyparcel-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Tidyparcel Visual"><img src="tidyzoning_files/figure-html/fig-tidyparcel-1.png" class="img-fluid figure-img" width="672"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tidyparcel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Tidyparcel Visual
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
+</section></details>
 </section>
 </section>
-<section id="find_bldg_type" class="level1">
-<h1>find_bldg_type()</h1>
-<p>This is a very simple function that will count the number of rooms and give one of 5 outputs.</p>
+<section id="tidybuilding" class="level3">
+<h3 class="anchored" data-anchor-id="tidybuilding">tidybuilding</h3>
+<p>An object representing the simple shape of a building. The tidybuilding data structure … (not finalized yet) See the <a href="../qmd/tidybuilding.html">tidybuilding page</a> for our process of creating the tidybuilding.</p>
+<details>
+<summary>
+More
+</summary>
+<section id="example-of-tidybuilding-object" class="level4">
+<h4 class="anchored" data-anchor-id="example-of-tidybuilding-object">Example of tidybuilding object</h4>
+<p>The following is an example of what the data structure might look like for an object representing a building. This building was modeled after a 2-family residence in Boston, MA.</p>
+<p><a href="figures/wordsworth.jpeg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="figures/wordsworth.jpeg" class="img-fluid" style="width:50.0%"></a></p>
+<p>Building Info</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="anjczaynoi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#anjczaynoi table {
+<div id="aqwwbinehb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#aqwwbinehb table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#anjczaynoi thead, #anjczaynoi tbody, #anjczaynoi tfoot, #anjczaynoi tr, #anjczaynoi td, #anjczaynoi th {
+#aqwwbinehb thead, #aqwwbinehb tbody, #aqwwbinehb tfoot, #aqwwbinehb tr, #aqwwbinehb td, #aqwwbinehb th {
   border-style: none;
 }
 
-#anjczaynoi p {
+#aqwwbinehb p {
   margin: 0;
   padding: 0;
 }
 
-#anjczaynoi .gt_table {
+#aqwwbinehb .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -340,12 +426,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-left-color: #D3D3D3;
 }
 
-#anjczaynoi .gt_caption {
+#aqwwbinehb .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#anjczaynoi .gt_title {
+#aqwwbinehb .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -357,7 +443,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-width: 0;
 }
 
-#anjczaynoi .gt_subtitle {
+#aqwwbinehb .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -369,7 +455,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-width: 0;
 }
 
-#anjczaynoi .gt_heading {
+#aqwwbinehb .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -381,13 +467,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#anjczaynoi .gt_bottom_border {
+#aqwwbinehb .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#anjczaynoi .gt_col_headings {
+#aqwwbinehb .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -402,7 +488,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#anjczaynoi .gt_col_heading {
+#aqwwbinehb .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -422,7 +508,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#anjczaynoi .gt_column_spanner_outer {
+#aqwwbinehb .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -434,15 +520,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 4px;
 }
 
-#anjczaynoi .gt_column_spanner_outer:first-child {
+#aqwwbinehb .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#anjczaynoi .gt_column_spanner_outer:last-child {
+#aqwwbinehb .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#anjczaynoi .gt_column_spanner {
+#aqwwbinehb .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -454,11 +540,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   width: 100%;
 }
 
-#anjczaynoi .gt_spanner_row {
+#aqwwbinehb .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#anjczaynoi .gt_group_heading {
+#aqwwbinehb .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -484,7 +570,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   text-align: left;
 }
 
-#anjczaynoi .gt_empty_group_heading {
+#aqwwbinehb .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -499,15 +585,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: middle;
 }
 
-#anjczaynoi .gt_from_md > :first-child {
+#aqwwbinehb .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#anjczaynoi .gt_from_md > :last-child {
+#aqwwbinehb .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#anjczaynoi .gt_row {
+#aqwwbinehb .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -526,7 +612,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   overflow-x: hidden;
 }
 
-#anjczaynoi .gt_stub {
+#aqwwbinehb .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -539,7 +625,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#anjczaynoi .gt_stub_row_group {
+#aqwwbinehb .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -553,15 +639,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   vertical-align: top;
 }
 
-#anjczaynoi .gt_row_group_first td {
+#aqwwbinehb .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#anjczaynoi .gt_row_group_first th {
+#aqwwbinehb .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#anjczaynoi .gt_summary_row {
+#aqwwbinehb .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -571,16 +657,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#anjczaynoi .gt_first_summary_row {
+#aqwwbinehb .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#anjczaynoi .gt_first_summary_row.thick {
+#aqwwbinehb .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#anjczaynoi .gt_last_summary_row {
+#aqwwbinehb .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -590,7 +676,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#anjczaynoi .gt_grand_summary_row {
+#aqwwbinehb .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -600,7 +686,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#anjczaynoi .gt_first_grand_summary_row {
+#aqwwbinehb .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -610,7 +696,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-top-color: #D3D3D3;
 }
 
-#anjczaynoi .gt_last_grand_summary_row_top {
+#aqwwbinehb .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -620,11 +706,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#anjczaynoi .gt_striped {
+#aqwwbinehb .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#anjczaynoi .gt_table_body {
+#aqwwbinehb .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -633,7 +719,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-bottom-color: #D3D3D3;
 }
 
-#anjczaynoi .gt_footnotes {
+#aqwwbinehb .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -647,7 +733,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#anjczaynoi .gt_footnote {
+#aqwwbinehb .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -656,7 +742,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#anjczaynoi .gt_sourcenotes {
+#aqwwbinehb .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -670,7 +756,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   border-right-color: #D3D3D3;
 }
 
-#anjczaynoi .gt_sourcenote {
+#aqwwbinehb .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -678,72 +764,72 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   padding-right: 5px;
 }
 
-#anjczaynoi .gt_left {
+#aqwwbinehb .gt_left {
   text-align: left;
 }
 
-#anjczaynoi .gt_center {
+#aqwwbinehb .gt_center {
   text-align: center;
 }
 
-#anjczaynoi .gt_right {
+#aqwwbinehb .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#anjczaynoi .gt_font_normal {
+#aqwwbinehb .gt_font_normal {
   font-weight: normal;
 }
 
-#anjczaynoi .gt_font_bold {
+#aqwwbinehb .gt_font_bold {
   font-weight: bold;
 }
 
-#anjczaynoi .gt_font_italic {
+#aqwwbinehb .gt_font_italic {
   font-style: italic;
 }
 
-#anjczaynoi .gt_super {
+#aqwwbinehb .gt_super {
   font-size: 65%;
 }
 
-#anjczaynoi .gt_footnote_marks {
+#aqwwbinehb .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#anjczaynoi .gt_asterisk {
+#aqwwbinehb .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#anjczaynoi .gt_indent_1 {
+#aqwwbinehb .gt_indent_1 {
   text-indent: 5px;
 }
 
-#anjczaynoi .gt_indent_2 {
+#aqwwbinehb .gt_indent_2 {
   text-indent: 10px;
 }
 
-#anjczaynoi .gt_indent_3 {
+#aqwwbinehb .gt_indent_3 {
   text-indent: 15px;
 }
 
-#anjczaynoi .gt_indent_4 {
+#aqwwbinehb .gt_indent_4 {
   text-indent: 20px;
 }
 
-#anjczaynoi .gt_indent_5 {
+#aqwwbinehb .gt_indent_5 {
   text-indent: 25px;
 }
 
-#anjczaynoi .katex-display {
+#aqwwbinehb .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#anjczaynoi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#aqwwbinehb div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -751,30 +837,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead>
 <tr class="header gt_col_headings">
-<th id="Possible.Outputs" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Possible.Outputs</th>
-<th id="Description" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Description</th>
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">name</th>
+<th id="value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">value</th>
 </tr>
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="Possible.Outputs">1-family</td>
-<td class="gt_row gt_left" headers="Description">1-family residence</td>
+<td class="gt_row gt_left" headers="name">units_3bed</td>
+<td class="gt_row gt_right" headers="value">2</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Possible.Outputs">2-family</td>
-<td class="gt_row gt_left" headers="Description">2-family residence</td>
+<td class="gt_row gt_left" headers="name">total_floors</td>
+<td class="gt_row gt_right" headers="value">3</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Possible.Outputs">3-family</td>
-<td class="gt_row gt_left" headers="Description">3-family residence</td>
+<td class="gt_row gt_left" headers="name">max_unit_size</td>
+<td class="gt_row gt_right" headers="value">1563</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left" headers="Possible.Outputs">4-family</td>
-<td class="gt_row gt_left" headers="Description">4-family residence or greater</td>
+<td class="gt_row gt_left" headers="name">min_unit_size</td>
+<td class="gt_row gt_right" headers="value">1563</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="Possible.Outputs">Other</td>
-<td class="gt_row gt_left" headers="Description">The number of units were not recorded</td>
+<td class="gt_row gt_left" headers="name">floor_area</td>
+<td class="gt_row gt_right" headers="value">3126</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">building_height</td>
+<td class="gt_row gt_right" headers="value">45</td>
 </tr>
 </tbody>
 </table>
@@ -782,40 +872,133 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>Footprint Geometry</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>find_bldg_type <span class="ot">&lt;-</span> <span class="cf">function</span>(tidybuilding){</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  possible_columns <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"units_0bed"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"units_1bed"</span>,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"units_2bed"</span>,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"units_3bed"</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"units_4bed"</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  tidybuilding <span class="ot">&lt;-</span> tidybuilding[,<span class="fu">names</span>(tidybuilding) <span class="sc">%in%</span> possible_columns] <span class="sc">|&gt;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">st_drop_geometry</span>()</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  row_sum <span class="ot">&lt;-</span> <span class="fu">rowSums</span>(tidybuilding)</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (row_sum <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)){</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste0</span>(row_sum[[<span class="dv">1</span>]], <span class="st">"_family"</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (row_sum <span class="sc">&gt;</span> <span class="dv">3</span>){</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(<span class="st">"4-family"</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(<span class="st">"other"</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><a href="tidyzoning_files/figure-html/unnamed-chunk-10-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="tidyzoning_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></a></p>
+</figure>
 </div>
-<section id="example-1" class="level3">
-<h3 class="anchored" data-anchor-id="example-1">Example 1</h3>
+</div>
+</div>
+</section></details>
+</section>
+</section>
+
+<section id="functions" class="level2">
+<h2 class="anchored" data-anchor-id="functions">Functions</h2>
+<p>Bellow are the functions I have thought of and the progress I have made to creating them.</p>
+<section id="find_district_idx" class="level3">
+<h3 class="anchored" data-anchor-id="find_district_idx"><a href="../qmd/tidyzoning_functions/find_district.html">find_district_idx()</a></h3>
+<p>Takes a parcel and a tidyzoning object and returns the index of the tidyzoning object in which the parcel is found.</p>
+Creation Progress
+<div class="progress">
+<div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+
+</div>
+</div>
+</section>
+<section id="find_bldg_type" class="level3">
+<h3 class="anchored" data-anchor-id="find_bldg_type"><a href="../qmd/tidyzoning_functions/find_bldg_type.html">find_bldg_type()</a></h3>
+<p>Takes a tidybuilding and returns what type it is. (1-familyl, 2-family, etc.)</p>
+Creation Progress
+<div class="progress">
+<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+
+</div>
+</div>
+</section>
+<section id="check_land_use" class="level3">
+<h3 class="anchored" data-anchor-id="check_land_use"><a href="../qmd/tidyzoning_functions/check_land_use.html">check_land_use()</a></h3>
+<p>Takes a tidybuilding and a district from a tidyzoning object and returns a boolean indicating whether or not the building’s type is permitted in the zoning district.</p>
+Creation Progress
+<div class="progress">
+<div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+
+</div>
+</div>
+</section>
+<section id="check_fl_area" class="level3">
+<h3 class="anchored" data-anchor-id="check_fl_area"><a href="../qmd/tidyzoning_functions/check_fl_area.html">check_fl_area()</a></h3>
+<p>Takes a tidybuilding and a district from a tidyzoning object and returns a boolean indicating whether or not the building’s floor area is permitted in the zoning district.</p>
+Creation Progress
+<div class="progress">
+<div class="progress-bar" role="progressbar" style="width: 15%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+
+</div>
+</div>
+</section>
+<section id="check_footprint" class="level3">
+<h3 class="anchored" data-anchor-id="check_footprint"><a href="../qmd/tidyzoning_functions/check_footprint.html">check_footprint()</a></h3>
+<p>Takes a tidybuilding and a tidyparcel and returns a boolean indicating whether or not the building will fit in the parcel.</p>
+Creation Progress
+<div class="progress">
+<div class="progress-bar" role="progressbar" style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
+
+</div>
+</div>
+</section>
+<section id="check_parking" class="level3">
+<h3 class="anchored" data-anchor-id="check_parking"><a href="tidyzoning_functions/check_parking.qmd">check_parking()</a></h3>
+<p>Takes a tidybuilding, a tidyparcel, and a district from a tidyzoning object and returns a boolean indicating whether or not there is room for the required parking of the building.</p>
+Creation Progress
+<div class="progress">
+<div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+
+</div>
+</div>
+<p><br> <br> <br> <br></p>
+</section>
+</section>
+<section id="future-functions" class="level2">
+<h2 class="anchored" data-anchor-id="future-functions">Future Functions</h2>
+<p>The following is just me organizing Carole’s notes to remember the type of functions we want to make</p>
+<section id="function-1" class="level3">
+<h3 class="anchored" data-anchor-id="function-1">function 1</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">find_bldg_type</span>(tidybuilding)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "2_family"</code></pre>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>function1 <span class="ot">&lt;-</span> <span class="cf">function</span>(parcel_boundaries, centerlines){}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>A function that reads parcel boundaries and road centerlines and returns a tidyparcel object. This will rely on a function or set of functions that identifies the sides of a parcel. <em>This function may not be a part of the package, but it is something that needs to be done.</em></p>
+</section>
+<section id="function-2" class="level3">
+<h3 class="anchored" data-anchor-id="function-2">function 2</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>find_district <span class="ot">&lt;-</span> <span class="cf">function</span>(tidyparcel, tidyzoning){}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>A function that takes the boundary of a single parcel and a tidyzoning object and returns the index of the district that parcel is in.</p>
+</section>
+<section id="function-3" class="level3">
+<h3 class="anchored" data-anchor-id="function-3">function 3</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>function3 <span class="ot">&lt;-</span> <span class="cf">function</span>(parcel_boundary, tidyzoning_district){}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A function that takes the boundary of a parcel and a tidyzoning district and returns one of three tidybuilding objects.</p>
+<ul>
+<li>One that maximizes the building footprint</li>
+<li>One that maximizes the building height</li>
+<li>One that may exceed the required floor area ratio, but maximizes both the building footprint and height</li>
+</ul>
+<p><em>I’m thinking this is just the geometry of a parcel and not specifically a tidyparcel object.</em></p>
+</section>
+<section id="function-4" class="level3">
+<h3 class="anchored" data-anchor-id="function-4">function 4</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>function4 <span class="ot">&lt;-</span> <span class="cf">function</span>(parcel_boundary, tidyzoning_district){}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A function that takes the boundary of a parcel, a tidyzoning district, and a tidybuilding object and returns a TRUE/FALSE indicator for whether the building is allowed on the parcel.</p>
+</section>
+<section id="function-5" class="level3">
+<h3 class="anchored" data-anchor-id="function-5">function 5</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>function5 <span class="ot">&lt;-</span> <span class="cf">function</span>(tidybuilding){}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A function that takes a tidybuilding object and returns an estimated number of housing units (assume 2-bedroom units)</p>
 
 
 </section>
 </section>
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1239,7 +1422,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

@@ -1,0 +1,72 @@
+﻿Parent,Name,Type,Description
+none,type,character,"The type of GeoJSON collection. Should always be ""FeatureCollection""."
+none,metadata,list,List of global municipality characteristics.
+none,features,array,Each feature in the array will be a different zoning district of the municipality with its zoning requirements.
+metadata,muni_name,character,Municipality Name
+metadata,muni_gnis,numeric,Municipality GNIS Code
+metadata,muni_fips,numeric,Municipality FIPS Code
+metadata,county_name,character,County Name
+metadata,county_gnis,numeric,County GNIS Code
+metadata,county_fips,numeric,County FIPS Code
+metadata,code_version,character,Code Version: The most recent date the municipality code was updated before it was put into OZMF.
+metadata,corner_lot_treat,,"Corner Lot Treatment: Designating how the specific municipality treats the sides of a corner lot. Options include ""Two Fronts, Two Backs"", ""Two Fronts, Two Sides"", ""Side Interior, Side Exterior"", ""Front, Sides, Back"""
+features,type,character,"The type of item in the features array. Should always be ""Feature"""
+features,properties,list,The list of district properties. This includes district information and constraints laid out in the code. 
+features,geometry,list,"As in standard GeoJSON format, this is a list containing the type of geometry and the coordinates. "
+properties,dist_info,list,District Information: A list of the variables outlining information about the district. 
+properties,lot_constraints,list,A list of the variables outlining lot constraints for the district.
+properties,stucture_constraints,list,A list of the variables outlining lot structure for the district.
+properties,other_constraints,list,A list of the variables outlining other constraints for the district not mentioned in the previous section.
+dist_info,dist_name,character,District Name
+dist_info,dist_abbr,character,Abbreviated District Name
+dist_info,dist_type,character,"District Type: residential, commercial, mixed-use, etc. Only include this field if it is stated in the zoning code. Don't interpret. "
+dist_info,created_by,character,The name of the person who originally extracted the zoning data and put it into the OZMF format.
+dist_info,created_date,character,The original date that the specific district zoning data was added to the GeoJSON file.
+dist_info,updated_by,character,"If the district zoning data has been updated, the name of the person who updated it."
+dist_info,updated_date,character,The date the district zoning data was updated.
+dist_info,uses_permitted,list,A list contianing the use permissions of the district.
+uses_permitted,uses_value,array,Array containing the permitted uses in the district.
+uses_permitted,excep_allowed,boolean,Exceptions Allowed: a true/false value stating whether any exceptions are permitted for the land use permissions.
+uses_permitted,excep_desc,character,Exception Descrption: a discription of when the exception is allowed. This must be chosen from a list of exceptions described by OZFS. 
+uses_permitted,excep_val,character,Value With Exception: an array containing the permitted uses after an exception is granted. 
+lot_constraints,lot_width,list,Lot Width: A list containing different attributes to help express the district constraints given in the code for lot width. 
+lot_constraints,lot_size,list,Lot Size: A list containing different attributes to help express the district constraints given in the code for lot size. 
+stucture_constraints,height,list,Height: A list containing different attributes to help express the district constraints given in the code for building height.
+stucture_constraints,stories,list,Stories: A list containing different attributes to help express the district constraints given in the code for number of stories permitted. 
+stucture_constraints,setback_front,list,Front Setback: A list containing different attributes to help express the district constraints given in the code for the front setback. 
+stucture_constraints,setback_side_ext,list,Exterior Side Setback: A list containing different attributes to help express the district constraints given in the code for the exterior side. The exterior side is only found in corner parcels that have two street facing sides. This is treated differently depending on the municipality. 
+stucture_constraints,setback_side_int,list,Interior Side Setback: A list containing different attributes to help express the district constraints given in the code for the exterior side. The exterior side is the side of the parcel that shares a side with another parcel.
+stucture_constraints,setback_rear,list,Rear Setback: A list containing different attributes to help express the district constraints given in the code for the rear setback. 
+stucture_constraints,lot_cov_bldg,list,Lot Coverage (Building Only): A list containing different attributes to help express lot coverage requirements. 
+stucture_constraints,lot_cov_bldg_imp,list,Lot Coverage (Building Plus Impervious Surfaces): A list containing different attributes to help express lot coverage requirements for the building along with other impervious structures.  
+stucture_constraints,pct_primary_area,list,Percent of Primary Structure's Area: A list containing different attributes to help express what percentage of the primary structure's area a secondary structure has to be. This will most likely only contain data for the ADU use type. 
+stucture_constraints,footprint,list,Footprint: A list containing different attributes to help express building footprint requirements.
+stucture_constraints,fl_area,list,Floor Area: A list containing different attributes to help express floor area requirements.
+stucture_constraints,far,list,Floor Area Ratio: A list containing different attributes to help express floor area ratio requirements.
+stucture_constraints,unit_qty,list,Unit Quantity: A list containing different attributes to help express the number of units allowed on the lot.
+stucture_constraints,unit_density,list,Unit Density: A list containing different attributes to help express unit density requirements. (Often expressed in terms of units per acre)
+stucture_constraints,unit_size,list,Unit Size: A list containing different attributes to help express unit size requirements.
+stucture_constraints,bedrooms,list,Bedrooms: A list containing different attributes to help express the number of bedrooms allowed. 
+other_constraints,roof_pitch,list,Roof Pitch: A list containing different attributes to help express roof pitch requirements.
+other_constraints,parking,list,Off-Street Parking: A list containing different attributes to help express off-street parking requirements.
+other_constraints,open_space,list,Open Space: A list containing different attributes to help express open space / green space requirements.
+other_constraints,swr_connect,list,Sewer Connection: A list containing different attributes to help express sewer connection requirements.
+other_constraints,wtr_connect,list,Water Connection: A list containing different attributes to help express water connection requirements.
+constraint,unit,character,Unit: The unit of meaurement that the value of the canstraint will be.
+constraint,use_name,array,An array of uses that share the constraint value.
+constraint,min_val,list,Minimum Value: a list containing the value or any formulas needed to obtain the value. 
+constraint,max_val,list,Maximum Value: a list containing the value or any formulas needed to obtain the value. 
+constraint,excep_allowed,boolean,Exceptions Allowed: a true/false value stating whether any exceptions are permitted for the specified land use and constraint. 
+constraint,excep_desc,character,Exception Descrption: a description of when the exception is allowed. This must be chosen from a list of exceptions described by OZFS. 
+constraint,excep_min_val,list,Minimum Value With Exception: a list containing the value or any formulas needed to obtain the value after an exception is granted. 
+constraint,excep_max_val,list,Maximum Value With Exception: a list containing the value or any formulas needed to obtain the value after an exception is granted. 
+constraint_value,expression,character,"The expression that will be used to assign a value for the constraint. This can be a single number or an equation, therefore it is treated as a character."
+constraint_value,rules,array,An array of different conditions and their corresponding values if they are met. 
+rules,logical_operator,character,"The operator describing how the conditions will be connected. Either ""OR"" or ""AND""."
+rules,conditions,array,An array of the conditions that have to be met before assigning a value.
+rules,expression,character,"The expression that will be used to assign a value for the constraint if the conditions are met. This can be a single number or an equation, therefore it is treated as a character."
+rules,select,character,"If applicable, this specifies which value to select from a list of expressions."
+rules,expressions,character,"A list of expressions to choose from. This should only be present if the ""select"" variable is present. "
+conditions,if_expr_1,character,"A reference to the var field above (var1, var2, var3, etc.). This specifies which variable to add the operation to. "
+conditions,symbol,character,"A comparisson symbol to describe the conditions. ("">"", ""<="", ""="", etc.)"
+conditions,if_expr_2,character,The value of the condition. Can either be a number or a referenced variable. 

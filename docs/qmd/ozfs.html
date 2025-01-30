@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>check_fl_area() – Zoning Accessibility Analysis Project</title>
+<title>Open-Zoning Feed Specification! – Zoning Accessibility Analysis Project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,62 +20,28 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Zoning Accessibility Analysis Project</span>
     </a>
   </div>
@@ -125,7 +91,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../qmd/index.html"> 
+    <a class="nav-link" href="../qmd/index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -134,23 +100,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-ozfs">    
         <li>
-    <a class="dropdown-item" href="../../qmd/ozfs.html">
+    <a class="dropdown-item" href="../qmd/ozfs.html">
  <span class="dropdown-text">OZFS - Documentation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/naming.html">
+    <a class="dropdown-item" href="../qmd/naming.html">
  <span class="dropdown-text">OZFS - Naming Convention</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/slides.html">
+    <a class="dropdown-item" href="../qmd/slides.html">
  <span class="dropdown-text">Slideshow Visualization</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/atlas_to_ozfs_howto.html">
+    <a class="dropdown-item" href="../qmd/atlas_to_ozfs_howto.html">
  <span class="dropdown-text">Converting NZA Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/atlas_to_ozfs_howto.html">
+    <a class="dropdown-item" href="../qmd/atlas_to_ozfs_howto.html">
  <span class="dropdown-text">NZA Manual Adjustment</span></a>
   </li>  
     </ul>
@@ -161,31 +127,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-tidyzoning">    
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning.html">
  <span class="dropdown-text">tidyzoning</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidybuilding.html">
+    <a class="dropdown-item" href="../qmd/tidybuilding.html">
  <span class="dropdown-text">tidybuilding</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/find_district.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/find_district.html">
  <span class="dropdown-text">find_district_idx()</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/find_bldg_type.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/find_bldg_type.html">
  <span class="dropdown-text">find_bldg_type()</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/check_land_use.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/check_land_use.html">
  <span class="dropdown-text">check_land_use()</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/check_fl_area.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/check_fl_area.html">
  <span class="dropdown-text">check_fl_area()</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/check_footprint.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/check_footprint.html">
  <span class="dropdown-text">check_footprint()</span></a>
   </li>  
     </ul>
@@ -206,12 +172,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#inputs" id="toc-inputs" class="nav-link active" data-scroll-target="#inputs">Inputs</a></li>
-  <li><a href="#check_fl_area" id="toc-check_fl_area" class="nav-link" data-scroll-target="#check_fl_area">check_fl_area()</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#municipality-file-structure" id="toc-municipality-file-structure" class="nav-link" data-scroll-target="#municipality-file-structure">Municipality File Structure</a></li>
+  <li><a href="#features" id="toc-features" class="nav-link" data-scroll-target="#features">Features</a>
   <ul>
-  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example 1</a></li>
-  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example 2</a></li>
+  <li><a href="#properties" id="toc-properties" class="nav-link" data-scroll-target="#properties">Properties</a>
+  <ul class="collapse">
+  <li><a href="#district-information-items" id="toc-district-information-items" class="nav-link" data-scroll-target="#district-information-items">District Information Items</a></li>
+  <li><a href="#constraint-details" id="toc-constraint-details" class="nav-link" data-scroll-target="#constraint-details">Constraint Details</a></li>
+  <li><a href="#constraint-values" id="toc-constraint-values" class="nav-link" data-scroll-target="#constraint-values">Constraint Values</a></li>
   </ul></li>
+  <li><a href="#geometry" id="toc-geometry" class="nav-link" data-scroll-target="#geometry">Geometry</a></li>
+  </ul></li>
+  <li><a href="#example-file-structures" id="toc-example-file-structures" class="nav-link" data-scroll-target="#example-file-structures">Example File Structures</a></li>
   </ul>
 </nav>
     </div>
@@ -220,7 +193,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">check_fl_area()</h1>
+<h1 class="title">Open-Zoning Feed Specification!</h1>
 </div>
 
 
@@ -237,153 +210,434 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The land_use_check() function takes tidydistrict, and a tidybuilding and returns a boolean stating if the building is allowed just base off of floor area requirements.</p>
-<section id="inputs" class="level2">
-<h2 class="anchored" data-anchor-id="inputs">Inputs</h2>
-<p><strong>tidydistrict:</strong> This is one row of the dataframe imported using st_read() from the geojson in the ozfs format.</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 19%">
-<col style="width: 26%">
-<col style="width: 21%">
-<col style="width: 16%">
-</colgroup>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The Open-Zoning Feed Specification (OZFS) is an attempt to create a more universal structure for digitally storing municipality zoning requirements. It is meant to be a digital replica of what is written in the municipality zoning codes and not an interpretation of said zoning codes. This universal, computer-readable format can be used to analyze current zoning standards across multiple municipalities.</p>
+<p>Efforts to create the OZFS were started by Luke Reeve and Paul Salama under the direction of Carole Voulgaris. Kamryn Mansfield and Houpu Li built off of this work to finalize the OZFS.</p>
+<p><strong>OZFS consists of one GeoJSON file for each municipality.</strong> The GeoJSON file contains district geometries and zoning requirements for the municipality. Some benefits of using a GeoJSON file are:</p>
+<ul>
+<li><p><strong>Organization:</strong> GeoJSON files allow many types of data, including spatial data, to be stored in the same file. Having one file for each municipality may keep things simple.</p></li>
+<li><p><strong>Consistency:</strong> GeoJSON files don’t need to include fields with no value. Because some zoning codes may need fields that other zoning codes don’t need, a GeoJSON file will eliminate the need to have a bunch of blank fields taking up space in the file This will allow consistency in naming and organization without including unneeded fields.</p></li>
+<li><p><strong>API Compatibility:</strong> GeoJSON files are compatible with APIs. If, one day, we want to create an API with this data, it will be easy to query.</p></li>
+</ul>
+<p>The following sections on this page will describe how the GeoJSON file is structured according to OZFS standards. The <a href="../qmd/naming.html">naming convention</a> page defines each possible field in the GeoJSON file and shows how it should be written in the code. This <a href="files/ozfs_structure_slides.pdf">slide presentation</a> may also be useful in visualizing the file structure.</p>
+</section>
+<section id="municipality-file-structure" class="level2">
+<h2 class="anchored" data-anchor-id="municipality-file-structure">Municipality File Structure</h2>
+<p>A typical <a href="https://geojson.org" target="_blank">GeoJSON</a> file contains a collection of features. Each feature has a list of properties and a geometry. Different from typical GeoJSON files, OZFS records global municipality information under a metadata field. The images below illustrate this structure.</p>
+<img src="figures/slide2.png" class="img-fluid">
+<blockquote class="blockquote">
+<details>
+<summary>
+Metadata Fields and Example
+</summary>
+<img src="figures/slide4.png" class="img-fluid">
+</details>
+</blockquote>
+</section>
+<section id="features" class="level2">
+<h2 class="anchored" data-anchor-id="features">Features</h2>
+<p>In the OZFS municipality file, each feature represents a zoning district with zoning regulations recorded in the feature properties and the district’s boundary recorded in the feature geometry.</p>
+<section id="properties" class="level3">
+<h3 class="anchored" data-anchor-id="properties">Properties</h3>
+<p>Because zoning regulations can be pretty extensive, the feature properties are organized into four categories. Under each category there are items that help describe information found in the zoning code. The items either describe details or constraints of the district. You can click on the categories below to view the items each one contains.</p>
+<blockquote class="blockquote">
+<details>
+<summary>
+District Information
+</summary>
+<p><strong>This is where most of the general information for the zoning district is stored.</strong></p>
+<ul>
+<li><p>District Name</p></li>
+<li><p>District Abbreviation</p></li>
+<li><p>Type of District</p></li>
+<li><p>Created By</p></li>
+<li><p>Date Created</p></li>
+<li><p>Updated By</p></li>
+<li><p>Date Updated</p></li>
+<li><p>Uses Permitted</p></li>
+</ul>
+<p><a href="figures/slide7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="figures/slide7.png" class="img-fluid"></a></p>
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Lot Constraints
+</summary>
+<p><strong>This section contains lot constraints mentioned in the zoning regulations.</strong></p>
+<ul>
+<li><p>Lot Width</p></li>
+<li><p>Lot Size</p></li>
+</ul>
+<p><a href="figures/slide9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="figures/slide9.png" class="img-fluid"></a></p>
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Structural Constraints
+</summary>
+<p><strong>This section contains stuctural constraints mentioned in the zoning regulations.</strong></p>
+<ul>
+<li><p>Height</p></li>
+<li><p>Stories</p></li>
+<li><p>Front Setback</p></li>
+<li><p>Exterior Side Setback</p></li>
+<li><p>Interior Side Setback</p></li>
+<li><p>Rear Setback</p></li>
+<li><p>Lot Coverage</p></li>
+<li><p>Footprint</p></li>
+<li><p>Floor Area</p></li>
+<li><p>Floor Area Ratio</p></li>
+<li><p>Unit Quantity</p></li>
+<li><p>Unit Density</p></li>
+<li><p>Unit Size</p></li>
+<li><p>Bedrooms</p></li>
+<li><p>Roof Pitch</p></li>
+</ul>
+<p><a href="figures/slide10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="figures/slide10.png" class="img-fluid"></a></p>
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Other Constraints
+</summary>
+<p><strong>This section contains constraints mentioned in the zoning regulations that aren’t specifically related to structures or lots.</strong></p>
+<ul>
+<li><p>Off-street Parking</p></li>
+<li><p>Open Space / Green Space</p></li>
+<li><p>Water Connectivity</p></li>
+<li><p>Sewer Connectivity</p></li>
+<li><p>Accessory Structures Permitted <img src="figures/slide11.png" class="img-fluid"></p></li>
+</ul>
+</details>
+</blockquote>
+<section id="district-information-items" class="level4">
+<h4 class="anchored" data-anchor-id="district-information-items">District Information Items</h4>
+<p>The items under the district information category have to do with basic information about the district. Besides the permitted uses item, each item has one value connected to it. The permitted uses item is a list containing the following items.</p>
+<blockquote class="blockquote">
+<details>
+<summary>
+Value
+</summary>
+An array containing the permitted uses in the district
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Exceptions Allowed
+</summary>
+A true/false value stating whether any exceptions are permitted for the land uses permitted
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Exception
+</summary>
+A description of when the exception is allowed chosen from a list of exceptions described by OZFS
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Exception Value
+</summary>
+An array containing the permitted uses after an exception is granted.
+</details>
+</blockquote>
+</section>
+<section id="constraint-details" class="level4">
+<h4 class="anchored" data-anchor-id="constraint-details">Constraint Details</h4>
+<p>The items under the constraints categories have to do with regulations found in the city code that constrain aspects of the lot, structures, and other things within the district. Due to the differences among municipalities in the way the zoning laws are written, each constraint item is another list of details that help accomplish three main objectives.</p>
+<ol type="1">
+<li><p><strong>Describe the constraint</strong></p></li>
+<li><p><strong>Describe exceptions to the constraint</strong></p></li>
+<li><p><strong>Record complex or conditional constraints</strong></p></li>
+</ol>
+<p>The list below shows all the possible details that can be placed under a constraint item.</p>
+<blockquote class="blockquote">
+<details>
+<summary>
+Unit
+</summary>
+The unit of measurement the recorded value will have
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Uses
+</summary>
+An array of uses that share the constraint value
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Minimum Value
+</summary>
+A list containing the value or any formulas needed to obtain the minimum constraint value
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Maximum Value
+</summary>
+A list containing the value or any formulas needed to obtain the maximum constraint value
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Exceptions Allowed
+</summary>
+A true/false value stating whether any exceptions are permitted for the specified land use and constraint
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Exception
+</summary>
+A description of when the exception is allowed chosen from a list of exceptions described by OZFS
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Exception Mimimum Value
+</summary>
+A list containing the value or any formulas needed to obtain the minimum constraint value when the exception is granted
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Exception Maximum Value
+</summary>
+A list containing the value or any formulas needed to obtain the maximum constraint value when the exception is granted
+</details>
+</blockquote>
+<p><a href="figures/slide14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="figures/slide14.png" class="img-fluid"></a></p>
+</section>
+<section id="constraint-values" class="level4">
+<h4 class="anchored" data-anchor-id="constraint-values">Constraint Values</h4>
+<p>As depicted in the image above, the constraint details will contain at least one constraint value field. There are four possible constraint value fields: for the minimum and maximum values of that constraint along with the minimum and maximum values of the constraint if exceptions are granted. To accommodate for zoning codes that don’t give a fixed value for their constraints, the constraint value fields are nested list with many other fields that can be used if necessary. The possible fields under the constraint values are listed below. Note that these can be a little easier to understand when visualizing it. See examples for extra clarity.</p>
+<blockquote class="blockquote">
+<details>
+<summary>
+Expression / Expressions
+</summary>
+Expression is a value or equation telling how to calculate the value. Expressions (plural) is an array with multiple expressions. This is only used inside a rule where you must choose the between more than one expression (see “Select Type” below).
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Rules
+</summary>
+An array containing different expressions that will be chosen if certain conditions are met.
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Logical Operator
+</summary>
+In case there are two conditions that have to be met (ex. greater than 50 feet <strong>AND</strong> less than 100 feet), the logical operator field specifies the relationship that the conditions must have. “AND” or “OR”
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Conditions
+</summary>
+<p>An array of conditions that have to be met in order for the expression to be chosen to assign the value. These conditions are the “if”s in an if-then statement.</p>
+<p>Example:</p>
+<p>For house</p>
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Symbol
+</summary>
+The symbol used to set the condition (“&gt;”, “&lt;=”, etc.)
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+If-Expression 1 and If-Expression 2
+</summary>
+<p>These are the expressions being compared that come before and after the symbol.</p>
+<p><strong>Example:</strong></p>
+<p><em>Condition:</em> “When the building is between 20 and 40 feet tall, the front setback is 50 feet.”</p>
+<table class="caption-top table">
 <thead>
 <tr class="header">
-<th style="text-align: center;">dist_info</th>
-<th style="text-align: center;">lot_constraints</th>
-<th style="text-align: center;">structure_constraints</th>
-<th style="text-align: center;">other_constraints</th>
-<th style="text-align: center;">geometry</th>
+<th>If Expression 1</th>
+<th>Symbol</th>
+<th>If Expression 2</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">geojson data</td>
-<td style="text-align: center;">geojson data</td>
-<td style="text-align: center;">geojson data</td>
-<td style="text-align: center;">geojson data</td>
-<td style="text-align: center;">geojson data</td>
+<td>“bldg_height”</td>
+<td>“&gt;=”</td>
+<td>“20”</td>
+</tr>
+<tr class="even">
+<td>“bldg_height”</td>
+<td>“&lt;=”</td>
+<td>“40”</td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<p><br> <strong>tidybuilding:</strong> This is the data formatted to represent a building.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Reading layer `tidybuilding_wordsworth' from data source 
-  `/Users/kamrynmansfield/Desktop/Harvard/zoning-data/qmd/files/tidybuilding_wordsworth.geojson' 
-  using driver `GeoJSON'
-Simple feature collection with 1 feature and 10 fields
-Geometry type: POLYGON
-Dimension:     XY
-Bounding box:  xmin: -105.9832 ymin: 3.442337 xmax: -105.9831 ymax: 3.44244
-Geodetic CRS:  WGS 84</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Reading layer `twelveplex_tall' from data source 
-  `/Users/kamrynmansfield/Desktop/Harvard/zoning-data/qmd/files/twelveplex_tall.geojson' 
-  using driver `GeoJSON'
-Simple feature collection with 1 feature and 7 fields
-Geometry type: POLYGON
-Dimension:     XY
-Bounding box:  xmin: -105.9832 ymin: 3.442345 xmax: -105.983 ymax: 3.442533
-Geodetic CRS:  WGS 84</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 6%">
-<col style="width: 7%">
-<col style="width: 8%">
-<col style="width: 8%">
-<col style="width: 6%">
-<col style="width: 9%">
-<col style="width: 7%">
-<col style="width: 10%">
-<col style="width: 7%">
-<col style="width: 8%">
-<col style="width: 17%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">units_3bed</th>
-<th style="text-align: center;">total_floors</th>
-<th style="text-align: center;">max_unit_size</th>
-<th style="text-align: center;">min_unit_size</th>
-<th style="text-align: center;">floor_area</th>
-<th style="text-align: center;">building_height</th>
-<th style="text-align: center;">parking_open</th>
-<th style="text-align: center;">parking_enclosed</th>
-<th style="text-align: center;">fl_bel_grade</th>
-<th style="text-align: center;">parking_level</th>
-<th style="text-align: center;">geometry</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">1563</td>
-<td style="text-align: center;">1563</td>
-<td style="text-align: center;">3126</td>
-<td style="text-align: center;">45</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">POLYGON ((-105.9832 3.44233…</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="check_fl_area_files/figure-html/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="check_fl_area_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="1920"></a></p>
-</figure>
-</div>
-</div>
-</div>
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Value
+</summary>
+The value connected to the condition. (ex. “variable” “symbol” “value” = “height” “&gt;” “20”)
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Select Type
+</summary>
+For cases when one must choose the largest or smallest of a set of values.
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+NOTE: Expression Creation Warning
+</summary>
+<p>When an expression that is more than just a value is needed, be careful to write it correctly. Any variables must be written according to the <a href="../qmd/naming.html">OZFS naming convention</a>.</p>
+<p><strong>Example:</strong></p>
+<p>If the maximum side setback is 10% of the lot width, here are two examples showing the right and wrong way to record it in the expression field.</p>
+<ul>
+<li><p><em>Correct Expression:</em> “lot_width * 0.1”</p></li>
+<li><p><em>Incorrect Expression:</em> “(Lot width) * 0.1”</p></li>
+</ul>
+</details>
+</blockquote>
+<p><a href="figures/slide15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="figures/slide15.png" class="img-fluid"></a></p>
+<blockquote class="blockquote">
+<details>
+<summary>
+Examples 1 and 2
+</summary>
+<img src="figures/slide16.png" class="img-fluid">
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Example 3
+</summary>
+<img src="figures/slide17.png" class="img-fluid">
+</details>
+</blockquote>
+<blockquote class="blockquote">
+<details>
+<summary>
+Example 4
+</summary>
+<img src="figures/slide18.png" class="img-fluid">
+</details>
+</blockquote>
 </section>
-<section id="check_fl_area" class="level1">
-<h1>check_fl_area()</h1>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Not working right not so I commented it out</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># check_fl_area &lt;- function(tidybuilding, tidydistrict){</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   dist_info_list &lt;- fromJSON(tidydistrict$dist_info)</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   </span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   bldg_type &lt;- find_bldg_type(tidybuilding)</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   </span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   bldg_type %in% dist_info_list$uses_permitted$uses_value</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The stuff below is still copied from check_land_use</p>
-<section id="example-1" class="level3">
-<h3 class="anchored" data-anchor-id="example-1">Example 1</h3>
-<p>This example uses a 2-family building and a district that only allows 1-family homes</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check_fl_area(tidybuilding, tidyzoning[1,])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
-<section id="example-2" class="level3">
-<h3 class="anchored" data-anchor-id="example-2">Example 2</h3>
-<p>This example is the same building, but in a district that does allow 2-family homes</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check_fl_area(tidybuilding, tidyzoning[12,])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="geometry" class="level3">
+<h3 class="anchored" data-anchor-id="geometry">Geometry</h3>
+<p>The district geometry is often a MultiPolygon, but it can be a Polygon. It should be in standard GeoJSON format. For more info on GeoJSON format, refer to <a href="https://geojson.org" target="_blank">GeoJSON documentation</a></p>
+</section>
+</section>
+<section id="example-file-structures" class="level2">
+<h2 class="anchored" data-anchor-id="example-file-structures">Example File Structures</h2>
+<details>
+<summary>
+Expand to see the first few rows of an example GeoJSON file structure
+</summary>
+<pre><code> {
+    "type": "FeatureCollection",
+    "metadata": {
+        "muni_name": "Corinth",
+        "muni_gnis": "2410229",
+        "muni_fips": "4816696",
+        "county_name": "Denton",
+        "county_gnis": "2410323",
+        "county_fips": "4819972"
+        "code_version": "2022-07-23"},
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "dist_info": {
+                "dist_name": "Mixed Density Residential",
+                "dist_abbr": "MX-D",
+                "dist_type": "Primarily Residential",
+                "created_by": "Kamryn Mansfield",
+                "created_date": "2024-08-15",
+                "updated_by": "Houpu Li",
+                "updated_date": "2024-08-26",
+                "uses_permitted": {
+                    "val": [ "1_family", "2_family", "3_family", "4_family" ],
+                    "excep_allowed": true,
+                    "excep_descr": "With city approval",
+                    "excep_val": ["1_family", "2_family", "3_family", "4_family", "Commercial"] } },
+            "lot_constraints": {
+                "lot_size": [
+                    {
+                        "unit": "acres",
+                        "use_name": "1_family",
+                        "min_val": 0.17,
+                        "max_val": .9,
+                        "excep_allowed": true,
+                        "excep_descr": "With city approval",
+                        "excep_min_val": .15,
+                        "excep_max_val": .9 },
+                    {
+                        "unit": "acres",
+                        "use_name": "2_family",
+                        "min_val": 0.029,
+                        "max_val": .9,
+                        "excep_allowed": true,
+                        "excep_descr": "With city approval",
+                        "excep_min_val": .2,
+                        "excep_max_val": 1 }
+                ] },
+            "structure_constraints": {
+                "height": [ ],
+                "stories": [ ],
+                "setback_front": [ ],
+                "setback_side": [ ],
+                "setback_rear": [ ]
+            },
+            "other_constraints": {},
+            "adu_constraints": {}
+        },
+        "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [[]]
+        }
+    }
+    ]
+}
+
+</code></pre>
+</details>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -808,7 +1062,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

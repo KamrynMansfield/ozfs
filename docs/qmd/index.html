@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>check_fl_area() – Zoning Accessibility Analysis Project</title>
+<title>Zoning Accessibility Analysis Project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,62 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -114,7 +77,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Zoning Accessibility Analysis Project</span>
     </a>
   </div>
@@ -125,7 +88,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../qmd/index.html"> 
+    <a class="nav-link active" href="../qmd/index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -134,23 +97,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-ozfs">    
         <li>
-    <a class="dropdown-item" href="../../qmd/ozfs.html">
+    <a class="dropdown-item" href="../qmd/ozfs.html">
  <span class="dropdown-text">OZFS - Documentation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/naming.html">
+    <a class="dropdown-item" href="../qmd/naming.html">
  <span class="dropdown-text">OZFS - Naming Convention</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/slides.html">
+    <a class="dropdown-item" href="../qmd/slides.html">
  <span class="dropdown-text">Slideshow Visualization</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/atlas_to_ozfs_howto.html">
+    <a class="dropdown-item" href="../qmd/atlas_to_ozfs_howto.html">
  <span class="dropdown-text">Converting NZA Data</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/atlas_to_ozfs_howto.html">
+    <a class="dropdown-item" href="../qmd/atlas_to_ozfs_howto.html">
  <span class="dropdown-text">NZA Manual Adjustment</span></a>
   </li>  
     </ul>
@@ -161,31 +124,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-tidyzoning">    
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning.html">
  <span class="dropdown-text">tidyzoning</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidybuilding.html">
+    <a class="dropdown-item" href="../qmd/tidybuilding.html">
  <span class="dropdown-text">tidybuilding</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/find_district.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/find_district.html">
  <span class="dropdown-text">find_district_idx()</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/find_bldg_type.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/find_bldg_type.html">
  <span class="dropdown-text">find_bldg_type()</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/check_land_use.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/check_land_use.html">
  <span class="dropdown-text">check_land_use()</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/check_fl_area.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/check_fl_area.html">
  <span class="dropdown-text">check_fl_area()</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../qmd/tidyzoning_functions/check_footprint.html">
+    <a class="dropdown-item" href="../qmd/tidyzoning_functions/check_footprint.html">
  <span class="dropdown-text">check_footprint()</span></a>
   </li>  
     </ul>
@@ -206,11 +169,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#inputs" id="toc-inputs" class="nav-link active" data-scroll-target="#inputs">Inputs</a></li>
-  <li><a href="#check_fl_area" id="toc-check_fl_area" class="nav-link" data-scroll-target="#check_fl_area">check_fl_area()</a>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a>
   <ul>
-  <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example 1</a></li>
-  <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example 2</a></li>
+  <li><a href="#data-standard" id="toc-data-standard" class="nav-link" data-scroll-target="#data-standard">Data Standard</a></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis">Analysis</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -220,7 +184,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">check_fl_area()</h1>
+<h1 class="title">Zoning Accessibility Analysis Project</h1>
 </div>
 
 
@@ -237,150 +201,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>The land_use_check() function takes tidydistrict, and a tidybuilding and returns a boolean stating if the building is allowed just base off of floor area requirements.</p>
-<section id="inputs" class="level2">
-<h2 class="anchored" data-anchor-id="inputs">Inputs</h2>
-<p><strong>tidydistrict:</strong> This is one row of the dataframe imported using st_read() from the geojson in the ozfs format.</p>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 16%">
-<col style="width: 19%">
-<col style="width: 26%">
-<col style="width: 21%">
-<col style="width: 16%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">dist_info</th>
-<th style="text-align: center;">lot_constraints</th>
-<th style="text-align: center;">structure_constraints</th>
-<th style="text-align: center;">other_constraints</th>
-<th style="text-align: center;">geometry</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">geojson data</td>
-<td style="text-align: center;">geojson data</td>
-<td style="text-align: center;">geojson data</td>
-<td style="text-align: center;">geojson data</td>
-<td style="text-align: center;">geojson data</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p><br> <strong>tidybuilding:</strong> This is the data formatted to represent a building.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Reading layer `tidybuilding_wordsworth' from data source 
-  `/Users/kamrynmansfield/Desktop/Harvard/zoning-data/qmd/files/tidybuilding_wordsworth.geojson' 
-  using driver `GeoJSON'
-Simple feature collection with 1 feature and 10 fields
-Geometry type: POLYGON
-Dimension:     XY
-Bounding box:  xmin: -105.9832 ymin: 3.442337 xmax: -105.9831 ymax: 3.44244
-Geodetic CRS:  WGS 84</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Reading layer `twelveplex_tall' from data source 
-  `/Users/kamrynmansfield/Desktop/Harvard/zoning-data/qmd/files/twelveplex_tall.geojson' 
-  using driver `GeoJSON'
-Simple feature collection with 1 feature and 7 fields
-Geometry type: POLYGON
-Dimension:     XY
-Bounding box:  xmin: -105.9832 ymin: 3.442345 xmax: -105.983 ymax: 3.442533
-Geodetic CRS:  WGS 84</code></pre>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 6%">
-<col style="width: 7%">
-<col style="width: 8%">
-<col style="width: 8%">
-<col style="width: 6%">
-<col style="width: 9%">
-<col style="width: 7%">
-<col style="width: 10%">
-<col style="width: 7%">
-<col style="width: 8%">
-<col style="width: 17%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">units_3bed</th>
-<th style="text-align: center;">total_floors</th>
-<th style="text-align: center;">max_unit_size</th>
-<th style="text-align: center;">min_unit_size</th>
-<th style="text-align: center;">floor_area</th>
-<th style="text-align: center;">building_height</th>
-<th style="text-align: center;">parking_open</th>
-<th style="text-align: center;">parking_enclosed</th>
-<th style="text-align: center;">fl_bel_grade</th>
-<th style="text-align: center;">parking_level</th>
-<th style="text-align: center;">geometry</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">1563</td>
-<td style="text-align: center;">1563</td>
-<td style="text-align: center;">3126</td>
-<td style="text-align: center;">45</td>
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">0</td>
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">POLYGON ((-105.9832 3.44233…</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><a href="check_fl_area_files/figure-html/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="check_fl_area_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="1920"></a></p>
-</figure>
-</div>
-</div>
-</div>
+<p>Intro to website Purpose Background Methodology - Data Standard - Create Software - Perform Analysis</p>
+<p>The purpose of this research is to analyze how much housing current zoning laws will accommodate by creating software to perform this analysis along many municipalities in an area. A main focus of this project will be the creation of software that makes it possible to repeat the analyses in other cities.</p>
+<p>This website is meant to provide clear documentation of our research process. The sections on this page will describe the purpose, background, and methodology for the research. The other pages on the website help to document specific aspects of the project.</p>
+<section id="background" class="level1">
+<h1>Background</h1>
+<p>Cities are getting denser and housing is getting more expensive. Many people are looking for ways to provide more housing.</p>
+<p>There has been research done about affects of changing zoning codes on housing availability, but there has been less done on the housing capacity that existing zoning codes allow. We want to see how much housing the current zoning codes would accommodate if they were left as they are.</p>
+<p>The <em>National Zoning Atlas</em> is an effort to record zoning codes as they are, but it mostly focuses on the the big picture to visualize where certain land uses are permitted. This may help cities and developers see where to start looking to build or where changes may need to occur, but it isn’t designed to take a building design and show where it is allowed. The <em>National Zoning Atlas</em> is also not designed to predict the housing capacity of areas.</p>
 </section>
-<section id="check_fl_area" class="level1">
-<h1>check_fl_area()</h1>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Not working right not so I commented it out</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># check_fl_area &lt;- function(tidybuilding, tidydistrict){</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   dist_info_list &lt;- fromJSON(tidydistrict$dist_info)</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   </span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   bldg_type &lt;- find_bldg_type(tidybuilding)</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   </span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   bldg_type %in% dist_info_list$uses_permitted$uses_value</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The stuff below is still copied from check_land_use</p>
-<section id="example-1" class="level3">
-<h3 class="anchored" data-anchor-id="example-1">Example 1</h3>
-<p>This example uses a 2-family building and a district that only allows 1-family homes</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check_fl_area(tidybuilding, tidyzoning[1,])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="methodology" class="level1">
+<h1>Methodology</h1>
+<p>Since we are more focused on creating software to perform these analyses, we didn’t start with a specific area of analysis in mind. Practically any area would work as long as it has zoning codes and corresponding parcel and road data for the area. We chose Dallas - Fort Worth (DFW) as our area of analysis because Lauren Fischer was kind enough to share the data she already gathered with us. She led the work in putting the DFW zoning codes into the National Zoning Atlas format, and she gave us access to the data. It is around 200 municipalities and is already in a standard, computer-readable format.</p>
+<p>After specifying the data source and study area, our methodology consists of 3 main steps: Creating a data standard, creating software, and performing the analysis</p>
+<section id="data-standard" class="level2">
+<h2 class="anchored" data-anchor-id="data-standard">Data Standard</h2>
+<p>We want to have the zoning data in a format that allows little room for interpretation of the zoning code. Most zoning codes contain similar information (minimum setbacks, minimum floor area, maximum height, etc.), but they can be so different in the way they express this information. For example, some cities will have a fixed maximum height that can’t be exceeded, while others have a maximum height that can be adjusted if the setback is adjusted.</p>
+<p>While the data we have is already in a computer-readable format created using the Zoning Atlas methodology, it doesn’t accomplish all of our goals. The lack of detail in some areas of the Zoning Atlas format means that transferring the data to the format may have required some interpretation.</p>
+<p>The exact information may not be necessary for creating software that can perform different analyses with the zoning codes, but we wanted to format the data in a way that was a bit more detailed and adaptable to the many zoning codes out there. For this reason, we have created our own feed specification: the <a href="../qmd/ozfs.html">Open-Zoning Feed Specification (OZFS)</a>.</p>
+<p>We plan to use the DFW data found in the National Zoning Atlas format and put it into our OZFS format before running the analysis. Future data that is translated to the OZFS format directly from city zoning codes will most likely contain more data than the data used in this study.</p>
 </section>
-<section id="example-2" class="level3">
-<h3 class="anchored" data-anchor-id="example-2">Example 2</h3>
-<p>This example is the same building, but in a district that does allow 2-family homes</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check_fl_area(tidybuilding, tidyzoning[12,])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<section id="software" class="level2">
+<h2 class="anchored" data-anchor-id="software">Software</h2>
+<p>The analysis will be completed using an R (and potentially Python) package called tidyzoning. For more information about the tidyzoning package, see the documentation found on the <a href="../qmd/tidyzoning.html">tidyzoning</a> page of this website.</p>
+<p>The list below describes some of main tasks we hope the package will accomplish.</p>
+<ul>
+<li><strong>Take a building plan and find out where the zoning codes will allow it.</strong></li>
+<li><strong>Take a parcel and find out what kind of building we can build on it. </strong></li>
+</ul>
+<p>In order to complete these tasks, it will be important to have a uniform way of describing buildings, parcels, and zoning codes. The tidyzoning documentation will describe the data classes made to represent these three things.</p>
+<ol type="1">
+<li><em>tidybuilding</em>: this data class stores information to represent a building</li>
+<li><em>tidyparcel</em>: this data class stores information to represent a parcel</li>
+<li><em>tidyzoning</em>: this data class stores information to represent the municipality’s zoning codes.</li>
+</ol>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<p>Once the above package is finished, we will generate tidybuilding objects representing each of several building types (assume 2-bedroom units):</p>
+<ol type="1">
+<li>A two-family home</li>
+<li>A three-family home</li>
+<li>A four-family home</li>
+<li>A six-family home</li>
+<li>A 12-family home</li>
+</ol>
+<p>Then we will identify all the parcels in the study area that can accommodate each of these types under the following conditions:</p>
+<ol type="1">
+<li>All parcels are considered to be available</li>
+<li>All unoccupied parcels are considered to be available</li>
+<li>All vacant parcels are considered to be available</li>
+<li>All parcels that have been sold in the past 12 months are considered to be available (representing the set of parcels that could be sold in a typical year)</li>
+</ol>
+<p>We also hope to calculate average accessibility to “attractions” with and without a car under existing conditions and under each of the 20 scenarios above.</p>
 
 
 </section>
@@ -808,38 +681,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 

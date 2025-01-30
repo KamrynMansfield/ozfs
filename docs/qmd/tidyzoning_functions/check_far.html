@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>check_fl_area() – Zoning Accessibility Analysis Project</title>
+<title>check_far() – Zoning Accessibility Analysis Project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -207,7 +207,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#inputs" id="toc-inputs" class="nav-link active" data-scroll-target="#inputs">Inputs</a></li>
-  <li><a href="#check_fl_area" id="toc-check_fl_area" class="nav-link" data-scroll-target="#check_fl_area">check_fl_area()</a>
+  <li><a href="#check_far" id="toc-check_far" class="nav-link" data-scroll-target="#check_far">check_far()</a>
   <ul>
   <li><a href="#example-1" id="toc-example-1" class="nav-link" data-scroll-target="#example-1">Example 1</a></li>
   <li><a href="#example-2" id="toc-example-2" class="nav-link" data-scroll-target="#example-2">Example 2</a></li>
@@ -220,7 +220,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">check_fl_area()</h1>
+<h1 class="title">check_far()</h1>
 </div>
 
 
@@ -273,28 +273,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><br> <strong>tidybuilding:</strong> This is the data formatted to represent a building.</p>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>Reading layer `tidybuilding_wordsworth' from data source 
-  `/Users/kamrynmansfield/Desktop/Harvard/zoning-data/qmd/files/tidybuilding_wordsworth.geojson' 
-  using driver `GeoJSON'
-Simple feature collection with 1 feature and 10 fields
-Geometry type: POLYGON
-Dimension:     XY
-Bounding box:  xmin: -105.9832 ymin: 3.442337 xmax: -105.9831 ymax: 3.44244
-Geodetic CRS:  WGS 84</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Reading layer `twelveplex_tall' from data source 
-  `/Users/kamrynmansfield/Desktop/Harvard/zoning-data/qmd/files/twelveplex_tall.geojson' 
-  using driver `GeoJSON'
-Simple feature collection with 1 feature and 7 fields
-Geometry type: POLYGON
-Dimension:     XY
-Bounding box:  xmin: -105.9832 ymin: 3.442345 xmax: -105.983 ymax: 3.442533
-Geodetic CRS:  WGS 84</code></pre>
-</div>
-</div>
+<p><strong>tidyparcel:</strong> This is data imported from a GeoJSON file with a feature for each edge of the parcel and a feature for the centroid of the parcel.</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -348,38 +327,89 @@ Geodetic CRS:  WGS 84</code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><a href="check_fl_area_files/figure-html/unnamed-chunk-6-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="check_fl_area_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="1920"></a></p>
+<p><a href="check_far_files/figure-html/unnamed-chunk-7-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="check_far_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="1920"></a></p>
 </figure>
 </div>
 </div>
 </div>
-</section>
-<section id="check_fl_area" class="level1">
-<h1>check_fl_area()</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Not working right not so I commented it out</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># check_fl_area &lt;- function(tidybuilding, tidydistrict){</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#   dist_info_list &lt;- fromJSON(tidydistrict$dist_info)</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#   </span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#   bldg_type &lt;- find_bldg_type(tidybuilding)</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#   </span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#   bldg_type %in% dist_info_list$uses_permitted$uses_value</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># }</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># we use this function in the check_far function</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>find_bldg_type <span class="ot">&lt;-</span> <span class="cf">function</span>(tidybuilding){</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  possible_columns <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"units_0bed"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"units_1bed"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"units_2bed"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"units_3bed"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                        <span class="st">"units_4bed"</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  tidybuilding <span class="ot">&lt;-</span> tidybuilding[,<span class="fu">names</span>(tidybuilding) <span class="sc">%in%</span> possible_columns] <span class="sc">|&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">st_drop_geometry</span>()</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  row_sum <span class="ot">&lt;-</span> <span class="fu">rowSums</span>(tidybuilding)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (row_sum <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>)){</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste0</span>(row_sum[[<span class="dv">1</span>]], <span class="st">"_family"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (row_sum <span class="sc">&gt;</span> <span class="dv">3</span>){</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(<span class="st">"4-family"</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">paste</span>(<span class="st">"other"</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="check_far" class="level1">
+<h1>check_far()</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>check_far <span class="ot">&lt;-</span> <span class="cf">function</span>(tidybuilding, tidyparcel, tidydistrict){</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  struct_const_list <span class="ot">&lt;-</span> <span class="fu">fromJSON</span>(tidydistrict<span class="sc">$</span>structure_constraints)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">length</span>(struct_const_list<span class="sc">$</span>far) <span class="sc">&gt;</span> <span class="dv">0</span>){</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    bldg_type <span class="ot">&lt;-</span> <span class="fu">find_bldg_type</span>(tidybuilding)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    fl_area <span class="ot">&lt;-</span> tidybuilding<span class="sc">$</span>floor_area</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">length</span>(struct_const_list<span class="sc">$</span>far)){</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (bldg_type <span class="sc">%in%</span> struct_const_list<span class="sc">$</span>far[[i]]<span class="sc">$</span>use_name){</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        far_idx <span class="ot">&lt;-</span> i</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    far_requirement <span class="ot">&lt;-</span> struct_const_list<span class="sc">$</span>far[[far_idx]]<span class="sc">$</span> <span class="co"># we need to do something about giving the values even if they are equations</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    far_requirement_units <span class="ot">&lt;-</span> struct_const_list<span class="sc">$</span>far[[<span class="dv">1</span>]]<span class="sc">$</span>unit</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    tidyparcel <span class="ot">&lt;-</span> tidyparcel[<span class="sc">!</span><span class="fu">is.na</span>(tidyparcel<span class="sc">$</span>side),]</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    lot_size <span class="ot">&lt;-</span> <span class="fu">st_union</span>(tidyparcel) <span class="sc">|&gt;</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">st_polygonize</span>() <span class="sc">|&gt;</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>      <span class="fu">st_area</span>()</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># something to work with the units (above, I have imported the "units" package that could help)</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    far <span class="ot">&lt;-</span> fl_area <span class="sc">/</span> lot_size</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    far <span class="sc">&lt;=</span> far_requirement</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="fu">warning</span>(<span class="st">"No floor area ratio listed. Assumed to have no limitations"</span>)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>structure_constraints <span class="ot">&lt;-</span> <span class="fu">fromJSON</span>(tidydistrict<span class="sc">$</span>structure_constraints)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The stuff below is still copied from check_land_use</p>
 <section id="example-1" class="level3">
 <h3 class="anchored" data-anchor-id="example-1">Example 1</h3>
 <p>This example uses a 2-family building and a district that only allows 1-family homes</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check_fl_area(tidybuilding, tidyzoning[1,])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check_far(tidybuilding, tidyzoning[1,])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="example-2" class="level3">
 <h3 class="anchored" data-anchor-id="example-2">Example 2</h3>
 <p>This example is the same building, but in a district that does allow 2-family homes</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check_fl_area(tidybuilding, tidyzoning[12,])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check_far(tidybuilding, tidyzoning[12,])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
@@ -808,7 +838,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
